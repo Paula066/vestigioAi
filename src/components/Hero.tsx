@@ -17,15 +17,15 @@ export default function Hero() {
             <br />
             z wysokim ruchem i pozycją w Google.
           </p>
-          <div className="mt-8">
+          <div className="mt-[48px]">
             <Link
               to="/oferta"
-              className="inline-block rounded-full px-8 py-3 text-base font-light text-black hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(90deg, #F0CAB8 0%, #D5BBF9 100%)' }}
+              className="inline-block rounded-full px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(90deg, #FFE4D6 0%, #D5BBF9 100%)' }}
             >
               Odbieram darmową ofertę
             </Link>
           </div>
-          <div className="mt-10 flex items-center gap-x-6 text-sm">
+          <div className="mt-3 flex items-center gap-x-6 text-sm">
             <div>
               <span className="font-semibold text-white">365</span>
               <span className="text-zinc-400"> portali w </span>
