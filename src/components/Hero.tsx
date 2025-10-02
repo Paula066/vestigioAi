@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import map from '../assets/map.svg';
+import senuto from '../assets/senuto.svg';
 
 export default function Hero() {
   return (
@@ -25,21 +26,26 @@ export default function Hero() {
               Odbieram darmową ofertę
             </Link>
           </div>
-          <div className="mt-3 flex items-center gap-x-6 text-sm">
-            <div>
-              <span className="font-semibold text-white">365</span>
-              <span className="text-zinc-400"> portali w </span>
-              <span className="font-semibold text-white">340</span>
-              <span className="text-zinc-400"> miejscach w Polsce</span>
-            </div>
-          </div>
+         
           
           </div>
           <div>
           <img src={map} alt="Vestigio"  />
           </div>
         </div>
-       
+        <div className="mt-[43px] flex justify-between items-end gap-x-[120px] text-sm">
+            <div className="flex  gap-[48px]">
+              <div>
+                <div className="text-[18px] leading-[30px] font-light text-white">500 000</div>
+                <div className="text-[16px] leading-[22px] text-zinc-400 max-w-[200px]">szacowany miesięczny ruch całej sieci</div>
+              </div>
+              <div>
+                <div className="text-[18px] leading-[30px] font-light text-white">175+</div>
+                <div className="text-[16px] leading-[22px] text-zinc-400 max-w-[200px]">portali z szacowanym miesięcznym ruchem 1000+ wejść / msc</div>
+              </div>
+              </div>
+              <div className="text-[14px] text-zinc-400 flex items-center whitespace-nowrap gap-x-1">Na podstawie danych z <img src={senuto} alt="Senuto" className="inline-block" /></div>
+            </div>
       </div>
      
     </div>

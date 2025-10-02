@@ -14,22 +14,22 @@ export default function Header() {
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
               <li>
-                <Link to="/dlaczego-warto" className="text-zinc-200 hover:text-white">
+                <Link to="/dlaczego-warto" className="text-white/70 hover:text-white">
                   Dlaczego warto
                 </Link>
               </li>
               <li>
-                <Link to="/oferta" className="text-zinc-200 hover:text-white">
+                <Link to="/oferta" className="text-white/70 hover:text-white">
                   Oferta
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-zinc-200 hover:text-white">
+                <Link to="/faq" className="text-white/70 hover:text-white">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-zinc-200 hover:text-white">
+                <Link to="/faq" className="text-white/70 hover:text-white">
                   Umów konsultację
                 </Link>
               </li>
