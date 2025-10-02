@@ -3,6 +3,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Header />
         <main className='pt-[120px] pb-[10px] md:pb-[30px]'>
           <Hero />
+          <About />
         </main>
       </div>
     </Router>
