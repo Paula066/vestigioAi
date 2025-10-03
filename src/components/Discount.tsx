@@ -124,7 +124,7 @@ export default function Discount() {
               .slider-bubble {
                 position: absolute;
                 left: calc(var(--thumb-position) * 1%);
-                top: -50px;
+                top: -65px;
                 transform: translateX(-50%);
                 pointer-events: none;
                 z-index: 10;
@@ -133,7 +133,7 @@ export default function Discount() {
 
               @media (min-width: 768px) {
                 .slider-bubble {
-                  top: -65px;
+                  top: -72px;
                 }
               }
 
@@ -228,7 +228,7 @@ export default function Discount() {
                 } as React.CSSProperties}
               >
                 <div className="relative">
-                  <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-4 py-1 md:py-[6px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
+                  <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-3 py-1 md:py-[3px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
                     {value.toLocaleString()} zł
                   </div>
                   <img 
