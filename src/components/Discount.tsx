@@ -173,8 +173,8 @@ export default function Discount() {
       </div>
 
       {/* Slider Section - Desktop */}
-      <div className="hidden lg:flex mt-[170px] flex-row items-center pt-4 pb-6 md:py-[41px] px-4 md:px-[48px] rounded-2xl md:rounded-[24px] border border-[#72787E] bg-black">
-        <h3 className="text-white text-[36px] font-light pb-[60px] leading-[40px] mb-0 mr-[60px] text-center">
+      <div className="hidden lg:flex mt-[96px] flex-row items-center pt-4 pb-6 md:py-[51px] px-4 md:px-[48px] rounded-2xl md:rounded-[24px] border border-[#72787E] bg-black">
+        <h3 className="text-white text-[36px] font-light leading-[40px] mb-0 mr-[60px] text-center">
           Sprawdź budżet <br /> i rabat
         </h3>
         

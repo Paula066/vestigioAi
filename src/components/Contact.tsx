@@ -32,8 +32,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className=" bg-black md:py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+    <section id="contact" className=" bg-black  ">
+      <div className="container px-4 md:px-6 mt-4 md:mt-0">
       <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8  md:text-left">
               Odbierz darmową ofertę
             </h2>
@@ -42,7 +42,7 @@ export default function Contact() {
           {/* Left Column - Form */}
           <div className="flex-1 flex justify-center md:justify-start">
            
-            <form onSubmit={handleSubmit} className="space-y-4 border border-white/[0.24] rounded-[24px] px-6 py-8 md:p-[48px] md:pt-[40px] w-full max-w-[655px]">
+            <form onSubmit={handleSubmit} className="space-y-4 border border-white/[0.24] rounded-[24px] p-3 md:px-6 md:py-8 md:p-[48px] md:pt-[40px] w-full max-w-[655px]">
               <div className="text-white text-[15px] sm:text-[16px] md:text-[18px] font-light mb-4 sm:mb-6">
                 Twoje dane
               </div>

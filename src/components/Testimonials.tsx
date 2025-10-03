@@ -9,7 +9,7 @@ interface TestimonialProps {
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ text, author, position, img }) => (
-  <div className="flex flex-col p-4 md:p-6 bg-black/30 rounded-2xl backdrop-blur-sm">
+  <div className="flex flex-col bg-black/30 rounded-2xl backdrop-blur-sm">
     <img src={quotesIcon} alt="quote" className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4" />
     <p className="text-white text-[14px] sm:text-[15px] md:text-[18px] font-light leading-[20px] sm:leading-[22px] md:leading-[26px] mb-4 sm:mb-6 md:mb-8">{text}</p>
     <div className="flex items-center gap-3 md:gap-4">
@@ -52,7 +52,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="md:py-12 md:py-24 bg-black">
+    <section className="md:py-12 md:pb-24 bg-black">
       <div className="container px-4 md:px-6">
         <h2 className="text-white text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] mb-8 md:mb-[48px]  md:text-left">
           Co mówią o nas nasi partnerzy

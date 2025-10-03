@@ -33,8 +33,8 @@ export default function App() {
             <Benefits />
             <Discount />
             <Testimonials />
-            <FAQ />
             <Contact />
+            <FAQ />
         </main>
         <Footer />
       </div>
