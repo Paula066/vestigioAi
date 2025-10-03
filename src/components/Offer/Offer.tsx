@@ -1,8 +1,10 @@
 import arrowDown1 from '../../assets/arrowDown1.svg';
 import arrowDown2 from '../../assets/arrowDown2.svg';
 import arrowDown3 from '../../assets/arrowDown3.svg';
+import publicationMap from '../../assets/publicationMap.svg';
 
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface GradientTextProps {
   children: React.ReactNode;
@@ -14,24 +16,119 @@ const GradientText = ({ children }: GradientTextProps) => (
   </span>
 );
 
+interface ExpandedContentProps {
+  type: 'pricing' | 'publication' | 'creation';
+}
+
+const ExpandedContent = ({ type }: ExpandedContentProps) => {
+  if (type === 'pricing') {
+    return (
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+        <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
+          <h4 className="text-white text-[20px] sm:text-[24px]">Standard</h4>
+          <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
+          <div className="space-y-6">
+            <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
+            <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
+            <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
+            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px]">Zobacz przykład</button>
+          </div>
+        </div>
+        <div className="rounded-[12px] bg-[rgba(255,255,255,0.08)] p-6 relative after:absolute after:inset-0 after:rounded-[12px] after:border-2 after:border-[rgba(155,127,239,1)] after:border-r-[rgba(72,222,238,1)] after:border-b-[rgba(72,222,238,1)]">
+          <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
+          <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
+          <div className="space-y-6">
+            <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
+            <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
+            <div className="text-[#C2C2C2]">Link w rankingu</div>
+            <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
+            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px]">Zobacz przykład</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
+  if (type === 'publication') {
+    return (
+      <div className="gap-6 sm:gap-8">
+        <div className="text-[#C2C2C2] text-[14px] sm:text-base mb-8 md:max-w-[870px]">Wypromuj swoje artykuły u nas. Wszystkie artykuły oznaczane są nakładką  graficzną Artykuł sponsorowany, zgodną z wymogami prawnymi. </div>
+        <div className="flex justify-between items-center">
+        <div className="flex-1 flex items-center">
+          <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
+        </div>
+        <div className="flex-1">
+          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
+            <h4 className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
+            <div className="font-inter text-[20px] font-medium leading-[28px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-4">120 - 179 zł</div>
+            <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
+              <div>Czas emisji artykułu: 12 miesięcy</div>
+              <div>Ilość linków w artykule: max 3</div>
+              <div>Linki dofollow mające wpływ na Twoje SEO: ✓</div>
+              <div>Promocja na stronie głównej przez 7 dni</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    );
+  }
+
+    return (
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
+        <div className="flex-1">
+          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
+            <h4 className="text-[32px] font-normal text-white mb-4">Mam swój artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px] mb-6">
+              Artykuł musi spełniać wymagania: min. 2500 zzs, zdjęcie główne + max 3 zdjęcia w treści, max 3 linki, tematyka zgodna z Polskim prawem
+            </div>
+            <div className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white">0 zł</div>
+          </div>
+        </div>
+        <div className="flex-1">
+          <div className="rounded-[24px] p-[2px] relative bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE]">
+            <div className="relative bg-black rounded-[22px] p-6">
+            <h4 className="text-[32px] font-normal text-white mb-4">Chcę zamówić artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px] mb-6">
+              Tworzony w autorskim procesie z AI + słowa kluczowe Twojej branży. Gotowy do publikacji: pełna treść, miniaturka, zdjęcie.
+            </div>
+            <div className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white">
+              60 <span className="text-[24px] font-normal">zł / artykuł</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+};
+
 interface PricingBoxProps {
   isExpanded: boolean;
   onToggle: () => void;
   title: string;
   price: string;
   arrowIcon: string;
-  isGradient?: boolean;
+  gradientType?: 'purple' | 'green' | 'purple-cream' | null;
+  expandedContentType?: 'pricing' | 'publication' | 'creation';
   className?: string;
 }
 
-function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, isGradient, className = '' }: PricingBoxProps) {
-  const titleClasses = isGradient 
-    ? "text-[16px] sm:text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
-    : "text-[16px] sm:text-[20px] font-light text-white";
+function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientType = null, expandedContentType, className = '' }: PricingBoxProps) {
+  const getGradientClasses = () => {
+    switch (gradientType) {
+      case 'purple':
+        return "bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent";
+      case 'green':
+        return "bg-gradient-to-r from-[#9FCBA2] to-[#FAFADB] bg-clip-text text-transparent";
+      case 'purple-cream':
+        return "bg-gradient-to-r from-[#FAFADB] to-[#EFACBB] bg-clip-text text-transparent";
+      default:
+        return "text-white";
+    }
+  };
 
-  const priceClasses = isGradient 
-    ? "text-[16px] sm:text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
-    : "text-[16px] sm:text-[20px] font-light text-white";
+  const titleClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
+  const priceClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
 
   return (
     <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[24px] sm:p-[48px] pb-[48px] sm:pb-[68px] ${className}`}>
@@ -44,35 +141,13 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, isGradient,
           >
             <img src={arrowIcon} alt="Expand" className="w-6 h-6" />
           </button>
-          <h3 className={titleClasses}>{title}</h3>
+          <h3 className={twMerge(titleClasses, 'text-[32px]')}>{title}</h3>
         </div>
         <span className={priceClasses}>{price}</span>
       </div>
       <div className={`grid grid-rows-[0fr] transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] mt-8' : ''}`}>
         <div className="overflow-hidden">
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-              <h4 className="text-white text-[20px] sm:text-[24px]">Standard</h4>
-              <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
-              <div className="space-y-6">
-                <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
-                <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
-                <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
-                <button className="text-[#ffffffcc] mt-[95px]">Zobacz przykład</button>
-              </div>
-            </div>
-            <div className="rounded-[12px] bg-[rgba(255,255,255,0.08)] p-6 relative after:absolute after:inset-0 after:rounded-[12px] after:border-2 after:border-[rgba(155,127,239,1)] after:border-r-[rgba(72,222,238,1)] after:border-b-[rgba(72,222,238,1)]">
-              <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
-              <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
-              <div className="space-y-6">
-                <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
-                <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
-                <div className="text-[#C2C2C2]">Link w rankingu</div>
-                <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
-                <button className="text-[#ffffffcc] mt-[95px]">Zobacz przykład</button>
-              </div>
-            </div>
-          </div>
+          {expandedContentType && <ExpandedContent type={expandedContentType} />}
         </div>
       </div>
     </div>
@@ -94,7 +169,8 @@ export default function Offer() {
           title="Wizytówka dla Twojej firmy"
           price="od 240 zł"
           arrowIcon={arrowDown1}
-          isGradient
+          gradientType="purple"
+          expandedContentType="pricing"
         />
         <PricingBox
           isExpanded={expandedSection === 2}
@@ -102,6 +178,8 @@ export default function Offer() {
           title="Publikacja artykułów"
           price="od 120 zł"
           arrowIcon={arrowDown2}
+          gradientType="green"
+          expandedContentType="publication"
         />
         <PricingBox
           isExpanded={expandedSection === 3}
@@ -109,6 +187,8 @@ export default function Offer() {
           title="Stworzenie artykułów"
           price="od 60 zł"
           arrowIcon={arrowDown3}
+          gradientType="purple-cream"
+          expandedContentType="creation"
           className="border-b border-[#72787E] rounded-b-[24px] !pb-[48px]"
         />
       </div>
