@@ -45,10 +45,10 @@ export default function Benefits() {
             <div className="mb-6">
               <img src={benefit.icon} alt={benefit.title} className="w-10 h-10 sm:w-12 sm:h-12" />
             </div>
-            <h3 className="text-white text-[19.7px] font-medium leading-[24.61px] tracking-[-0.197px] mb-3 max-w-[280px]">
+            <h3 className="text-white text-[16px] sm:text-[18px] md:text-[19.7px] font-medium leading-[20px] sm:leading-[22px] md:leading-[24.61px] tracking-[-0.197px] mb-2 sm:mb-3 max-w-[280px]">
               {benefit.title}
             </h3>
-            <p className="text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px] max-w-[280px]">
+            <p className="text-[#C2C2C2] font-inter text-[14px] sm:text-[15px] md:text-[16px] font-normal leading-[20px] sm:leading-[21px] md:leading-[22px] max-w-[280px]">
               {benefit.description}
             </p>
           </div>
