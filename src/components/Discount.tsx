@@ -141,7 +141,7 @@ export default function Discount() {
                 -webkit-appearance: none;
                 width: 100%;
                 height: 12px;
-                background: #333333;
+                background: rgba(192, 193, 224, 0.3);
                 border-radius: 8px;
                 outline: none;
                 position: relative;
