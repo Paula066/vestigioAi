@@ -32,7 +32,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
             <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
             <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
             <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
-            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px]">Zobacz przykład</button>
+            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px] cursor-pointer">Zobacz przykład</button>
           </div>
         </div>
         <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE]">
@@ -44,7 +44,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
               <div className="text-[#C2C2C2]">Link w rankingu</div>
               <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
-              <button className="text-[#ffffffcc] mt-[60px] sm:mt-[46px]">Zobacz przykład</button>
+              <button className="text-[#ffffffcc] mt-[60px] sm:mt-[46px] cursor-pointer">Zobacz przykład</button>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function Offer() {
         <p className="text-white text-[20px] sm:text-[24px] font-light leading-[24px] sm:leading-[28px] tracking-[-1px] sm:tracking-[-1.2px] text-center sm:text-left">
           Skontaktuj się po więcej konkretów. Bez zobowiązań.
         </p>
-        <button className="w-full sm:w-auto inline-block rounded-full px-[32px] sm:px-[48px] py-3 text-base font-bold text-black hover:opacity-90 transition-opacity button-animate">
+        <button className="w-full sm:w-auto inline-block rounded-full px-[32px] sm:px-[48px] py-3 text-base font-bold text-black hover:opacity-90 transition-opacity button-animate cursor-pointer">
           Odbierz darmową ofertę
         </button>
       </div>

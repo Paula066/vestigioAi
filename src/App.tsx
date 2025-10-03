@@ -11,6 +11,8 @@ import Benefits from './components/Benefits';
 import Discount from './components/Discount';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -31,8 +33,10 @@ export default function App() {
             <Benefits />
             <Discount />
             <Testimonials />
+            <FAQ />
             <Contact />
         </main>
+        <Footer />
       </div>
     </Router>
   );
