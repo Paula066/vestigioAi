@@ -1,12 +1,43 @@
 import checkedIcon from '../assets/checkedIcon2.svg';
+import downIcon from '../assets/down.svg';
 import React from 'react';
 
+const DISCOUNT_TIERS = [
+  { value: 1500, discount: 5 },
+  { value: 5000, discount: 10 },
+  { value: 10000, discount: 15 },
+  { value: 20000, discount: 25 },
+  { value: 30000, discount: 30 },
+  { value: 50000, discount: 40 }
+] as const;
+
+const SLIDER_CONFIG = {
+  min: 1500,
+  max: 50000,
+  step: 100,
+  initialValue: 3000
+} as const;
+
 export default function Discount() {
-  const [value, setValue] = React.useState(3000);
+  const [value, setValue] = React.useState(SLIDER_CONFIG.initialValue);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(Number(e.target.value));
   };
+
+  const calculateProgress = () => {
+    return ((value - SLIDER_CONFIG.min) / (SLIDER_CONFIG.max - SLIDER_CONFIG.min)) * 100;
+  };
+
+  const calculateDiscount = () => {
+    for (let i = DISCOUNT_TIERS.length - 1; i >= 0; i--) {
+      if (value >= DISCOUNT_TIERS[i].value) {
+        return DISCOUNT_TIERS[i].discount;
+      }
+    }
+    return 0;
+  };
+
   const benefits = [
     'Start od 5 000 zł netto',
     'Zero presji – publikujesz, kiedy chcesz',
@@ -76,77 +107,85 @@ export default function Discount() {
           Sprawdź budżet <br /> i rabat
         </h3>
         
-          <div className="relative mb-12 flex-1">
-            <div className="relative p-2 flex-1 bg-[#363645] rounded-[999px]">
-              <div 
-                className="absolute"
-                style={{ 
-                  left: `${((value - 1000) / (50000 - 1000)) * 100}%`,
-                  top: '-80px',
-                  transform: 'translateX(-50%)'
-                }}
-              >
+        <div className="relative mb-12 flex-1">
+          <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px]">
+            <div 
+              className="absolute"
+              style={{ 
+                left: `${calculateProgress()}%`,
+                top: '-80px',
+                transform: 'translateX(-50%)'
+              }}
+            >
+              <div className="relative">
                 <div className="bg-[#212125] text-[#52DCEA] text-[31px] font-normal px-4 py-[6px] rounded-[44px] whitespace-nowrap">
                   {value.toLocaleString()} zł
                 </div>
+                <img 
+                  src={downIcon} 
+                  alt="down" 
+                  className="absolute left-1/2 -translate-x-1/2 -bottom-2"
+                />
               </div>
-              <style jsx>{`
-                input[type="range"] {
-                  -webkit-appearance: none;
-                  width: 100%;
-                  height: 16px;
-                  background: #333333;
-                  border-radius: 8px;
-                  outline: none;
-                  position: relative;
-                }
-
-                input[type="range"]::before {
-                  content: '';
-                  position: absolute;
-                  height: 100%;
-                  left: 0;
-                  width: var(--progress);
-                  background: linear-gradient(90deg, #9B7FEF, #48DEEE);
-                  border-radius: 8px;
-                }
-
-                input[type="range"]::-webkit-slider-thumb {
-                  -webkit-appearance: none;
-                  appearance: none;
-                  width: 48px;
-                  height: 48px;
-                  background: #48DEEE;
-                  border-radius: 50%;
-                  cursor: pointer;
-                  box-shadow: 0 0 20px rgba(72, 222, 238, 0.5);
-                  position: relative;
-                  z-index: 2;
-                }
-              `}</style>
-              <input
-                type="range"
-                min="1000"
-                max="50000"
-                value={value}
-                onChange={handleChange}
-                className="w-full"
-                style={{ 
-                  '--progress': `${((value - 1000) / (50000 - 1000)) * 100}%`
-                } as React.CSSProperties}
-              />
             </div>
+            <style jsx>{`
+              input[type="range"] {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 16px;
+                background: #333333;
+                border-radius: 8px;
+                outline: none;
+                position: relative;
+              }
+
+              input[type="range"]::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                left: 0;
+                width: var(--progress);
+                background: linear-gradient(90deg, #9B7FEF, #48DEEE);
+                border-radius: 8px;
+              }
+
+              input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 32px;
+                height: 32px;
+                background: #48DEEE;
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+                box-shadow: 0 0 20px rgba(72, 222, 238, 0.5);
+              }
+            `}</style>
+            <input
+              type="range"
+              min={SLIDER_CONFIG.min}
+              max={SLIDER_CONFIG.max}
+              step={SLIDER_CONFIG.step}
+              value={value}
+              onChange={handleChange}
+              className="w-full"
+              style={{ 
+                '--progress': `${calculateProgress()}%`
+              } as React.CSSProperties}
+            />
           </div>
 
           <div className="flex flex-1 justify-end items-center gap-2">
             <span className="text-[#48DEEE] text-[72px] font-normal">
-              {Math.round((value / 50000) * 45)}
+              {calculateDiscount()}
             </span>
             <div className="text-white">
               <span className="text-[44px] font-normal">%</span>
               <div className="text-[16px] leading-[20px]">Tyle rabatu otrzymasz</div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
