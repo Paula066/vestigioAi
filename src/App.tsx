@@ -25,7 +25,7 @@ export default function App() {
           <div className='pt-[30px] md:pt-[120px]'>
             <About />
           </div>
-          <div className='mb-[158px]'>
+          <div className='mb-[60px] md:mb-[158px]'>
             <Stats />
           </div>
             <Process />

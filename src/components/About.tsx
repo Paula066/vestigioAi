@@ -64,18 +64,7 @@ export default function About() {
                 className="w-full h-auto"
               />
             </div>
-            <div className="absolute" style={{ 
-                top: '232px',
-                left: '19px',
-                width: '100%',
-                height: 'auto'
-              }}>
-              <img 
-                src={gradient} 
-                alt="" 
-                className="w-full h-auto"
-              />
-            </div>
+           
           </div>
          <div className='w-full md:flex-1 flex flex-col md:ml-[60px] px-4 md:px-0'>
             <div className='flex flex-col md:flex-row gap-6 md:gap-8'>
