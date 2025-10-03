@@ -75,3 +75,19 @@ html, body, #root {
     opacity: 0.8;
   }
 }
+
+/* Animacja przycisku - przechodzący gradient w prawą stronę */
+@keyframes buttonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.button-animate {
+  background: linear-gradient(90deg, #FFE4D6, #C5E9E8, #E8DFF5, #F5E8ED, #FFE4D6);
+  background-size: 200% 100%;
+  animation: buttonGradient 3s linear infinite;
+}
