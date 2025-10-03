@@ -21,7 +21,7 @@ export default function Hero() {
               <div className="mt-[32px] md:mt-[48px]">
                 <Link
                   to="/oferta"
-                  className="inline-block rounded-full px-[32px] md:px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity button-animate"
+                  className="inline-block rounded-full font-medium px-[32px] md:px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity button-animate"
                 >
                   Odbieram darmową ofertę
                 </Link>
