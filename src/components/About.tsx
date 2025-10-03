@@ -5,6 +5,8 @@ import effect from '../assets/effect.svg';
 import visibility from '../assets/visibility.svg';
 import grow from '../assets/grow.svg';
 import elastic from '../assets/elastic.svg';
+import graphic1 from '../assets/graphic1.svg';
+import graphic2 from '../assets/graphic2.svg';
 
 const gradientStyle = {
   background: 'linear-gradient(90deg, #BEC5DE 0%, #8E9FC7 33.18%, #8BAECA 66.83%, #C7E3E3 100%, #BEC5DE 100%)',
@@ -54,6 +56,7 @@ export default function About() {
             </span>
           </h1>
         </div>
+
         <div className="mt-16 flex justify-center">
           <div className='flex-1 relative'>
             <div className="relative z-10">
@@ -111,6 +114,36 @@ export default function About() {
                 </div>
             </div>
          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8">
+          <div className=" flex rounded-[12px]" style={{
+            backgroundImage: 'url("/bg.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}>
+            <div className='pl-8 pt-8 pb-8'>
+                <div className="text-[52px] font-medium leading-[32px] font-light mb-4 text-black">365</div>
+                <div className="text-[18px] font-medium leading-[22px] mb-[32px] text-black">lokalnych portali w całej <br /> Polsce, w których pojawi się Twoja firma.</div>
+                <div className="text-base font-light leading-[20px] text-black text-[-14px]">Portale obejmują swoim zasięgiem <br /> aż 365 miejscowości.</div>
+            </div>
+
+                <img src={graphic1} alt="Bg" />
+
+          </div>
+
+          <div className="flex rounded-[12px]" style={{
+           backgroundImage: 'url("/box.png")',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center'
+          }}>
+            <div className='pl-8 pt-8 pb-8'>
+            <div className="text-[52px] font-medium leading-[32px] font-light mb-4 text-black">87 174</div>
+            <div className="text-[18px] font-medium leading-[22px] mb-[32px] text-black">lokalnych rankingów firm w całej Polsce, a Ty możesz być wśród nich.</div>
+            <div className="text-base font-light leading-[20px] text-black text-[-14px]">Rankingi to doskonałe miejsce na zaprezentowanie swojej firmy.</div>
+            </div>
+            <img src={graphic2} alt="Bg" />
+          </div>
         </div>
       </div>
     </section>
