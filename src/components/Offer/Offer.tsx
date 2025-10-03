@@ -9,7 +9,7 @@ interface GradientTextProps {
 }
 
 const GradientText = ({ children }: GradientTextProps) => (
-  <span className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent font-inter text-[15.8px] font-normal leading-[22.69px] font-medium">
+  <span className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent font-inter text-[14px] sm:text-[15.8px] font-normal leading-[20px] sm:leading-[22.69px] font-medium">
     {children}
   </span>
 );
@@ -26,15 +26,15 @@ interface PricingBoxProps {
 
 function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, isGradient, className = '' }: PricingBoxProps) {
   const titleClasses = isGradient 
-    ? "text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
-    : "text-[20px] font-light text-white";
+    ? "text-[16px] sm:text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
+    : "text-[16px] sm:text-[20px] font-light text-white";
 
   const priceClasses = isGradient 
-    ? "text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
-    : "text-[20px] font-light text-white";
+    ? "text-[16px] sm:text-[20px] font-light bg-gradient-to-r from-[rgba(155,127,239,1)] to-[rgba(72,222,238,1)] bg-clip-text text-transparent"
+    : "text-[16px] sm:text-[20px] font-light text-white";
 
   return (
-    <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[48px] pb-[68px] ${className}`}>
+    <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[24px] sm:p-[48px] pb-[48px] sm:pb-[68px] ${className}`}>
       <div 
         onClick={onToggle}
         className="flex items-center justify-between cursor-pointer">
@@ -50,10 +50,10 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, isGradient,
       </div>
       <div className={`grid grid-rows-[0fr] transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] mt-8' : ''}`}>
         <div className="overflow-hidden">
-          <div className="mt-8 grid grid-cols-2 gap-8">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-              <h4 className="text-white text-[24px]">Standard</h4>
-              <div className="text-[34px] font-light text-white mb-6 mt-3">240 zł <span className="text-[24px] font-light">netto / rok</span></div>
+              <h4 className="text-white text-[20px] sm:text-[24px]">Standard</h4>
+              <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
               <div className="space-y-6">
                 <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
                 <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
@@ -62,8 +62,8 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, isGradient,
               </div>
             </div>
             <div className="rounded-[12px] bg-[rgba(255,255,255,0.08)] p-6 relative after:absolute after:inset-0 after:rounded-[12px] after:border-2 after:border-[rgba(155,127,239,1)] after:border-r-[rgba(72,222,238,1)] after:border-b-[rgba(72,222,238,1)]">
-              <h4 className="text-white text-[24px]">Premium</h4>
-              <div className="text-[34px] font-light text-white mb-6">600 <span className="text-[24px] font-light">zł netto / rok</span></div>
+              <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
+              <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
               <div className="space-y-6">
                 <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
                 <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
