@@ -32,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <section className=" bg-black md:py-12 md:py-24">
+    <section id="contact" className=" bg-black md:py-12 md:py-24">
       <div className="container px-4 md:px-6">
       <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8  md:text-left">
               Odbierz darmową ofertę

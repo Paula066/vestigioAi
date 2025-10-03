@@ -17,7 +17,7 @@ const gradientStyle = {
 
 export default function About() {
   return (
-    <section className="relative py-8">
+    <section id="about" className="relative py-8">
       <style>
         {`
           @keyframes gradient {

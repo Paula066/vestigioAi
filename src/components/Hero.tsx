@@ -4,7 +4,7 @@ import senuto from '../assets/senuto.svg';
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden  pt-[90px]">
+    <div id="hero" className="relative overflow-hidden  pt-[90px]">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
             <div className="text-center md:text-left md:mr-[50px] lg:mr-[0px]">
