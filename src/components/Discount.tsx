@@ -77,7 +77,7 @@ export default function Discount() {
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
               <div className="text-[#9B7FEF] text-[32px] md:text-[44px] font-normal leading-[40px] md:leading-[60px]">do</div>
               <div className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent text-[48px] md:text-[72px] font-normal leading-[40px] md:leading-[60px]">
-                45<span className="text-[32px] md:text-[44px]">% rabatu</span>
+                40<span className="text-[32px] md:text-[44px]">% rabatu</span>
               </div>
             </div>
             <div className="text-white text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
