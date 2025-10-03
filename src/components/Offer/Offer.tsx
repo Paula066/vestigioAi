@@ -25,26 +25,26 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
   if (type === 'pricing') {
     return (
       <div className="md:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-        <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-          <h4 className="text-white text-[20px] sm:text-[24px]">Standard</h4>
-          <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
-          <div className="space-y-6">
+        <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-4 sm:p-6">
+          <h4 className="text-white text-[16px] sm:text-[20px]">Standard</h4>
+          <div className="text-[22px] sm:text-[28px] font-light text-white mb-3 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[16px] sm:text-[20px] font-light">netto / rok</span></div>
+          <div className="space-y-4 sm:space-y-6">
             <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
             <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
             <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
-            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px] cursor-pointer">Zobacz przykład</button>
+            <button className="text-[#ffffffcc] mt-[40px] sm:mt-[95px] cursor-pointer">Zobacz przykład</button>
           </div>
         </div>
         <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE]">
-          <div className="relative bg-black rounded-[10px] p-6">
-            <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
-            <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
-            <div className="space-y-6">
+          <div className="relative bg-black rounded-[10px] p-4 sm:p-6">
+            <h4 className="text-white text-[16px] sm:text-[20px]">Premium</h4>
+            <div className="text-[22px] sm:text-[28px] font-light text-white mb-3 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[16px] sm:text-[20px] font-light">netto / rok</span></div>
+            <div className="space-y-4 sm:space-y-6">
               <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
               <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
               <div className="text-[#C2C2C2]">Link w rankingu</div>
               <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
-              <button className="text-[#ffffffcc] mt-[60px] sm:mt-[46px] cursor-pointer">Zobacz przykład</button>
+              <button className="text-[#ffffffcc] mt-[40px] sm:mt-[46px] cursor-pointer">Zobacz przykład</button>
             </div>
           </div>
         </div>
@@ -59,14 +59,14 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
           Wypromuj swoje artykuły u nas. Wszystkie artykuły oznaczane są nakładką  graficzną Artykuł sponsorowany, zgodną z wymogami prawnymi.
         </div>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-0">
-          <div className="w-full sm:flex-1 flex items-center justify-center">
-            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[280px] sm:max-w-[400px]" />
+          <div className="hidden sm:flex w-full sm:flex-1 items-center justify-center">
+            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
           </div>
-          <div className="w-full sm:flex-1">
-            <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-              <h4 className="font-inter text-[32px] sm:text-[44px] font-normal leading-[38px] sm:leading-[57px] tracking-[-1.28px] sm:tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
-              <div className="font-inter text-[20px] font-medium leading-[28px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-4">120 - 179 zł</div>
-              <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
+          <div className="w-full sm:w-1/2">
+            <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-4 sm:p-6">
+              <h4 className="font-inter text-[24px] sm:text-[32px] font-normal leading-[32px] sm:leading-[42px] tracking-[-1px] sm:tracking-[-1.28px] text-white mb-[12px] sm:mb-[16px]">Artykuł sponsorowany</h4>
+              <div className="font-inter text-[16px] sm:text-[18px] font-medium leading-[24px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-3 sm:mb-4">120 - 179 zł</div>
+              <div className="space-y-3 sm:space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
                 <div>Czas emisji artykułu: 12 miesięcy</div>
                 <div>Ilość linków w artykule: max 3</div>
                 <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4" /></div>
@@ -82,23 +82,23 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
     return (
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
         <div className="flex-1">
-          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] pt-[28px] px-[24px] pb-[40px] min-h-[230px]">
-            <h4 className="text-[24px] font-normal leading-[28px] tracking-[-1.2px] text-white mb-[12px]">Mam swój artykuł</h4>
-            <div className="text-[#C2C2C2] font-inter text-[15.8px] font-light leading-[22.69px] mb-6">
+          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] pt-[20px] sm:pt-[28px] px-[16px] sm:px-[24px] pb-[30px] sm:pb-[40px] min-h-[200px] sm:min-h-[230px]">
+            <h4 className="text-[18px] sm:text-[20px] font-normal leading-[24px] tracking-[-0.9px] text-white mb-[10px] sm:mb-[12px]">Mam swój artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[13px] sm:text-[14px] font-light leading-[20px] mb-4 sm:mb-6">
               Artykuł musi spełniać wymagania: min. 2500 zzs, zdjęcie główne + max 3 zdjęcia w treści, max 3 linki, tematyka zgodna z Polskim prawem
             </div>
-            <div className="font-inter text-[36px] font-medium leading-[28px] tracking-[-1.8px] text-white">0 zł</div>
+            <div className="font-inter text-[28px] sm:text-[32px] font-medium leading-[24px] tracking-[-1.4px] text-white">0 zł</div>
           </div>
         </div>
         <div className="flex-1">
           <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE]">
-            <div className="relative bg-black rounded-[10px] pt-[28px] px-[24px] pb-[40px] min-h-[230px]">
-            <h4 className="text-[24px] font-normal leading-[28px] tracking-[-1.2px] text-white mb-[12px]">Chcę zamówić artykuł</h4>
-            <div className="text-[#C2C2C2] font-inter text-[15.8px] font-light leading-[22.69px] mb-6">
+            <div className="relative bg-black rounded-[10px] pt-[20px] sm:pt-[28px] px-[16px] sm:px-[24px] pb-[30px] sm:pb-[40px] min-h-[200px] sm:min-h-[230px]">
+            <h4 className="text-[18px] sm:text-[20px] font-normal leading-[24px] tracking-[-0.9px] text-white mb-[10px] sm:mb-[12px]">Chcę zamówić artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[13px] sm:text-[14px] font-light leading-[20px] mb-4 sm:mb-6">
               Tworzony w autorskim procesie z AI + słowa kluczowe Twojej branży. Gotowy do publikacji: pełna treść, miniaturka, zdjęcie.
             </div>
-            <div className="font-inter text-[36px] mt-[37px] font-medium leading-[28px] tracking-[-1.8px] text-white">
-              60 <span className="text-[24px] font-medium leading-[28px] tracking-[-1.2px]">zł / artykuł</span>
+            <div className="font-inter text-[28px] sm:text-[32px] mt-[30px] sm:mt-[37px] font-medium leading-[24px] tracking-[-1.4px] text-white">
+              60 <span className="text-[20px] sm:text-[24px] font-medium leading-[24px] tracking-[-1px]">zł / artykuł</span>
             </div>
             </div>
           </div>
@@ -132,13 +132,13 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
     }
   };
 
-  const titleClasses = `text-[15px] sm:text-[24px] md:text-[32px] font-light ${getGradientClasses()}`;
-  const priceClasses = `text-[15px] sm:text-[18px] md:text-[20px] font-light text-[#C2C2C2] md:text-transparent md:bg-clip-text ${gradientType ? 'md:bg-gradient-to-r md:from-[#9B7FEF] md:to-[#48DEEE]' : ''} ${gradientType === 'green' ? 'md:from-[#9FCBA2] md:to-[#FAFADB]' : ''} ${gradientType === 'purple-cream' ? 'md:from-[#FAFADB] md:to-[#EFACBB]' : ''}`;
+  const titleClasses = `text-[14px] sm:text-[18px] md:text-[24px] font-light ${getGradientClasses()}`;
+  const priceClasses = `text-[13px] sm:text-[16px] md:text-[18px] font-light text-[#C2C2C2] md:text-transparent md:bg-clip-text ${gradientType ? 'md:bg-gradient-to-r md:from-[#9B7FEF] md:to-[#48DEEE]' : ''} ${gradientType === 'green' ? 'md:from-[#9FCBA2] md:to-[#FAFADB]' : ''} ${gradientType === 'purple-cream' ? 'md:from-[#FAFADB] md:to-[#EFACBB]' : ''}`;
 
   return (
     <div 
       onClick={onToggle}
-      className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[30px] sm:pb-[68px] hover:shadow-[inset_0_60px_40px_-8px_rgba(255,255,255,0.15)] transition-shadow cursor-pointer ${className}`}
+      className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[12px] sm:p-[48px] pb-[28px] sm:pb-[68px] hover:shadow-[inset_0_60px_40px_-8px_rgba(255,255,255,0.15)] transition-shadow cursor-pointer ${className}`}
     >
       <div className="flex items-center justify-between hover:opacity-80 transition-opacity">
         <div className="flex items-center gap-2 sm:gap-4">

@@ -38,13 +38,18 @@ export default function Header() {
                 </button>
               </li>
               <li>
+                <button onClick={() => handleNavClick('faq')} className="text-white/70 hover:text-white cursor-pointer">
+                  FAQ
+                </button>
+              </li>
+              <li>
                 <button onClick={() => handleNavClick('offer')} className="text-white/70 hover:text-white cursor-pointer">
                   Oferta
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('faq')} className="text-white/70 hover:text-white cursor-pointer">
-                  FAQ
+                <button onClick={() => handleNavClick('discount')} className="text-white/70 hover:text-white cursor-pointer">
+                  Rabaty
                 </button>
               </li>
               <li>
@@ -88,13 +93,18 @@ export default function Header() {
                     </button>
                   </li>
                   <li>
+                    <button onClick={() => handleNavClick('faq')} className="text-white/70 hover:text-white block w-full text-left cursor-pointer">
+                      FAQ
+                    </button>
+                  </li>
+                  <li>
                     <button onClick={() => handleNavClick('offer')} className="text-white/70 hover:text-white block w-full text-left cursor-pointer">
                       Oferta
                     </button>
                   </li>
                   <li>
-                    <button onClick={() => handleNavClick('faq')} className="text-white/70 hover:text-white block w-full text-left cursor-pointer">
-                      FAQ
+                    <button onClick={() => handleNavClick('discount')} className="text-white/70 hover:text-white block w-full text-left cursor-pointer">
+                      Rabaty
                     </button>
                   </li>
                   <li>
