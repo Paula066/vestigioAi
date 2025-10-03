@@ -19,7 +19,7 @@ const SLIDER_CONFIG = {
 } as const;
 
 export default function Discount() {
-  const [value, setValue] = React.useState(SLIDER_CONFIG.initialValue);
+  const [value, setValue] = React.useState<number>(SLIDER_CONFIG.initialValue);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(Number(e.target.value));
@@ -27,6 +27,13 @@ export default function Discount() {
 
   const calculateProgress = () => {
     return ((value - SLIDER_CONFIG.min) / (SLIDER_CONFIG.max - SLIDER_CONFIG.min)) * 100;
+  };
+
+  const calculateBubblePosition = () => {
+    const progress = calculateProgress();
+    // Ograniczamy pozycję dymku, aby nie wychodził poza kontener
+    // Min 8% i max 92% zapobiega wychodzeniu poza brzegi
+    return Math.max(8, Math.min(92, progress));
   };
 
   const calculateDiscount = () => {
@@ -110,10 +117,9 @@ export default function Discount() {
         <div className="relative flex-1 w-full md:mr-[48px] mb-6 md:mb-0">
           <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px] h-[29px] max-w-full md:max-w-[370px]">
             <div 
-              className="absolute"
+              className="absolute -top-[60px] md:-top-[80px]"
               style={{ 
-                left: `${calculateProgress()}%`,
-                top: '-60px md:-80px',
+                left: `${calculateBubblePosition()}%`,
                 transform: 'translateX(-50%)'
               }}
             >
@@ -128,7 +134,7 @@ export default function Discount() {
                 />
               </div>
             </div>
-            <style jsx>{`
+            <style>{`
               input[type="range"] {
                 -webkit-appearance: none;
                 width: 100%;
