@@ -113,7 +113,7 @@ export default function Contact() {
                 </div>
                 <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden border-2 border-[#48DEEE]">
                   <img
-                    src="/sara-gamrot.jpg"
+                    src="/pm.png"
                     alt="Sara Gamrot"
                     className="w-full h-full object-cover"
                   />
