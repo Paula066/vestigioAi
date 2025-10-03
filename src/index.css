@@ -17,6 +17,15 @@ html, body, #root {
   height: 100%;
 }
 
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Force dark background for Viral Loops referral widget host */
 .referral-url-widget {
   background-color: #000000 !important;

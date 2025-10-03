@@ -1,0 +1,151 @@
+import React, { useState } from 'react';
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  position: string;
+  phone: string;
+  email: string;
+}
+
+export default function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    position: '',
+    phone: '',
+    email: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log(formData);
+  };
+
+  return (
+    <section className="bg-black py-24">
+      <div className="container">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+          {/* Left Column - Form */}
+          <div className="flex-1">
+            <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8">
+              Odbierz darmową ofertę
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="text-white text-[18px] font-light mb-6">
+                Twoje dane
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="Imię"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Nazwisko"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+                />
+              </div>
+              <input
+                type="text"
+                name="position"
+                value={formData.position}
+                onChange={handleChange}
+                placeholder="Stanowisko"
+                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Numer telefonu (opcjonalny)"
+                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Mail"
+                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+              />
+              <button
+                type="submit"
+                className="w-full mt-6 py-4 px-8 rounded-full bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE] text-black font-medium hover:opacity-90 transition-opacity"
+              >
+                Odbieram darmową ofertę
+              </button>
+            </form>
+          </div>
+
+          {/* Right Column - Contact Info */}
+          <div className="flex-1">
+            <div className="flex flex-col items-start">
+              <div className="flex items-center gap-6 mb-6">
+                <div className="flex flex-col">
+                  <h3 className="text-white text-[24px] md:text-[32px] font-light">
+                    Sara Gamrot
+                  </h3>
+                  <p className="text-[#72787E] text-[14px] md:text-[16px]">
+                    Project Manager
+                  </p>
+                </div>
+                <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden border-2 border-[#48DEEE]">
+                  <img
+                    src="/sara-gamrot.jpg"
+                    alt="Sara Gamrot"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2 mb-12">
+                <a
+                  href="mailto:s.gamrot@vestigio.ai"
+                  className="text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors"
+                >
+                  s.gamrot@vestigio.ai
+                </a>
+                <div className="text-white text-[16px] md:text-[18px]">
+                  514 019 528
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-white text-[24px] md:text-[32px] font-light mb-4">
+                  Konsultacja
+                </h4>
+                <p className="text-[#C2C2C2] text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] mb-6">
+                  Możesz też od razu zarezerwować 15-minutową, bezpłatną konsultację. Konkretnie i bez zobowiązań.
+                </p>
+                <a
+                  href="#konsultacja"
+                  className="text-white text-[16px] md:text-[18px] underline hover:text-[#48DEEE] transition-colors"
+                >
+                  Umawiam się na konsultację
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

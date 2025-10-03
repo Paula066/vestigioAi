@@ -5,7 +5,7 @@ import senuto from '../assets/senuto.svg';
 export default function Hero() {
   return (
     <div className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-white">

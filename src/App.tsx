@@ -10,6 +10,7 @@ import Offer from './components/Offer/Offer';
 import Benefits from './components/Benefits';
 import Discount from './components/Discount';
 import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
             <Benefits />
             <Discount />
             <Testimonials />
+            <Contact />
         </main>
       </div>
     </Router>

@@ -46,34 +46,34 @@ export default function Discount() {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-[100px]">
-      <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+    <div className="container mb-12 md:mb-[100px]">
+      <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-24">
         {/* Left Column */}
         <div className="flex-1">
-          <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] text-white mb-6">
+          <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] tracking-[-1.76px] text-white mb-4 md:mb-6">
             Zdobądź swój rabat
           </h2>
           
-          <div className="mb-[36px]">
-            <div className="flex items-center gap-4">
-              <div className="text-[#9B7FEF] text-[44px] font-normal leading-[60px]">rabaty od</div>
-              <div className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent text-[72px] font-normal leading-[60px]">
-                1500 <span className="text-[44px]">zł</span>
+          <div className="mb-6 md:mb-[36px]">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <div className="text-[#9B7FEF] text-[32px] md:text-[44px] font-normal leading-[40px] md:leading-[60px]">rabaty od</div>
+              <div className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent text-[48px] md:text-[72px] font-normal leading-[40px] md:leading-[60px]">
+                1500 <span className="text-[32px] md:text-[44px]">zł</span>
               </div>
             </div>
-            <div className="text-white text-[16px] font-normal leading-[20px]">
+            <div className="text-white text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
               Im więcej kupisz tym mniej wydasz!
             </div>
           </div>
 
-          <div className="mb-8">
-            <div className="flex items-center gap-4">
-              <div className="text-[#9B7FEF] text-[44px] font-normal leading-[60px]">do</div>
-              <div className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent text-[72px] font-normal leading-[60px]">
-                45<span className="text-[44px]">% rabatu</span>
+          <div className="mb-6 md:mb-8">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+              <div className="text-[#9B7FEF] text-[32px] md:text-[44px] font-normal leading-[40px] md:leading-[60px]">do</div>
+              <div className="bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE] bg-clip-text text-transparent text-[48px] md:text-[72px] font-normal leading-[40px] md:leading-[60px]">
+                45<span className="text-[32px] md:text-[44px]">% rabatu</span>
               </div>
             </div>
-            <div className="text-white text-[16px] font-normal leading-[20px]">
+            <div className="text-white text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
               Więcej się opłaca!
             </div>
           </div>
@@ -81,20 +81,20 @@ export default function Discount() {
 
         {/* Right Column */}
         <div className="flex-1">
-          <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] text-white mb-6">
+          <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] tracking-[-1.76px] text-white mb-4 md:mb-6">
             Skorzystaj z opcji prepaid
           </h2>
           
-          <p className="text-[#C2C2C2] text-[16px] font-normal leading-[22px] mb-12">
+          <p className="text-[#C2C2C2] text-[14px] md:text-[16px] font-normal leading-[20px] md:leading-[22px] mb-8 md:mb-12">
             Zarezerwuj większy budżet z góry i korzystaj z niego wtedy, kiedy chcesz.
             Im większy pakiet, tym wyższy rabat – a środki są ważne aż 16 miesięcy.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <img src={checkedIcon} alt="check" className="w-4 h-4" />
-                <div className="text-[16px] font-semibold leading-[22px] bg-gradient-to-r from-[#9FCBA2] to-[#FAFADB] bg-clip-text text-transparent">{benefit}</div>
+              <div key={index} className="flex items-center gap-2 md:gap-3">
+                <img src={checkedIcon} alt="check" className="w-3 h-3 md:w-4 md:h-4" />
+                <div className="text-[14px] md:text-[16px] font-semibold leading-[20px] md:leading-[22px] bg-gradient-to-r from-[#9FCBA2] to-[#FAFADB] bg-clip-text text-transparent">{benefit}</div>
               </div>
             ))}
           </div>
@@ -102,29 +102,29 @@ export default function Discount() {
       </div>
 
       {/* Slider Section */}
-      <div className="mt-[170px] flex items-center py-[41px] px-[48px] rounded-[24px] border border-[#72787E] bg-black">
-        <h3 className="text-white text-[36px] font-light leading-[40px] mr-[60px]">
+      <div className="mt-12 md:mt-[170px] flex flex-col md:flex-row items-start md:items-center py-6 md:py-[41px] px-4 md:px-[48px] rounded-2xl md:rounded-[24px] border border-[#72787E] bg-black">
+        <h3 className="text-white text-[28px] md:text-[36px] font-light leading-[32px] md:leading-[40px] mb-6 md:mb-0 md:mr-[60px] text-center md:text-left">
           Sprawdź budżet <br /> i rabat
         </h3>
         
-        <div className="relative flex-1 mr-[48px]">
-          <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px] h-[29px] max-w-[370px]">
+        <div className="relative flex-1 w-full md:mr-[48px] mb-6 md:mb-0">
+          <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px] h-[29px] max-w-full md:max-w-[370px]">
             <div 
               className="absolute"
               style={{ 
                 left: `${calculateProgress()}%`,
-                top: '-80px',
+                top: '-60px md:-80px',
                 transform: 'translateX(-50%)'
               }}
             >
               <div className="relative">
-                <div className="bg-[#212125] text-[#52DCEA] text-[31px] font-normal px-4 py-[6px] rounded-[44px] whitespace-nowrap">
+                <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-4 py-1 md:py-[6px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
                   {value.toLocaleString()} zł
                 </div>
                 <img 
                   src={downIcon} 
                   alt="down" 
-                  className="absolute left-1/2 -translate-x-1/2 -bottom-2"
+                  className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-4 md:w-auto"
                 />
               </div>
             </div>
@@ -132,7 +132,10 @@ export default function Discount() {
               input[type="range"] {
                 -webkit-appearance: none;
                 width: 100%;
-                height: 16px;
+                height: 12px;
+                @media (min-width: 768px) {
+                  height: 16px;
+                }
                 background: #333333;
                 border-radius: 8px;
                 outline: none;
@@ -152,10 +155,17 @@ export default function Discount() {
               input[type="range"]::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 29px;
-                height: 29px;
+                width: 24px;
+                height: 24px;
+                @media (min-width: 768px) {
+                  width: 29px;
+                  height: 29px;
+                }
                 background: #48DEEE;
-                border: 7px solid #AAF7FE;
+                border: 5px solid #AAF7FE;
+                @media (min-width: 768px) {
+                  border-width: 7px;
+                }
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
@@ -176,12 +186,10 @@ export default function Discount() {
               } as React.CSSProperties}
             />
           </div>
-
-         
         </div>
-        <div className="flex flex-1 items-center gap-2">
+        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-center md:text-left">
             <span 
-              className="text-[72px] font-normal"
+              className="text-[48px] md:text-[72px] font-normal leading-[1]"
               style={{
                 background: 'linear-gradient(90deg, #9B7FEF 0%, #48DEEE 100%)',
                 WebkitBackgroundClip: 'text',
@@ -192,8 +200,7 @@ export default function Discount() {
               {calculateDiscount() + '%'}
             </span>
             <div className="text-white">
-
-              <div className="font-montserrat text-[18.96px] font-medium leading-[23.628px]">
+              <div className="font-montserrat text-[16px] md:text-[18.96px] font-medium leading-[20px] md:leading-[23.628px]">
                 Tyle rabatu <br /> otrzymasz
               </div>
             </div>

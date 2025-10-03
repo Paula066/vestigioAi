@@ -26,7 +26,7 @@ export default function About() {
           }
         `}
       </style>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="">
           <h1 className="font-['Inter'] text-[28px] md:text-[44px] leading-[36px] md:leading-[57px] font-normal tracking-[-1.12px] md:tracking-[-1.76px]">
             <span style={gradientStyle}>

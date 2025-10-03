@@ -1,6 +1,6 @@
 export default function Process() {
   return (
-    <div className="mx-auto max-w-7xl mb-[166px] px-4 sm:px-6 lg:px-8">
+    <div className="container mb-[166px]">
         <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] text-white  mb-[54px]">
           Jak wygląda proces publikacji?
         </h2>
