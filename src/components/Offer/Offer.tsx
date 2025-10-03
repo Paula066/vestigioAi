@@ -136,10 +136,11 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
   const priceClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
 
   return (
-    <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[32px] sm:pb-[68px] ${className}`}>
-      <div 
-        onClick={onToggle}
-        className="flex items-center justify-between cursor-pointer">
+    <div 
+      onClick={onToggle}
+      className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[32px] sm:pb-[68px] hover:shadow-[inset_0_20px_40px_-8px_rgba(255,255,255,0.15)] transition-shadow cursor-pointer ${className}`}
+    >
+      <div className="flex items-center justify-between hover:opacity-80 transition-opacity">
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
             className={`cursor-pointer transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`}
