@@ -53,7 +53,7 @@ export default function Discount() {
   ];
 
   return (
-    <div className="container px-4 md:px-6 mb-12 md:mb-[100px]">
+    <div id="discount" className="container px-4 md:px-6 mb-12 md:mb-[100px]">
       <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-24">
         {/* Left Column */}
         <div className="flex-1">
