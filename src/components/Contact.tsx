@@ -34,24 +34,26 @@ export default function Contact() {
   return (
     <section className="bg-black py-24">
       <div className="container">
-        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
-          {/* Left Column - Form */}
-          <div className="flex-1">
-            <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8">
+      <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8">
               Odbierz darmową ofertę
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+          
+          {/* Left Column - Form */}
+          <div className="flex-1">
+           
+            <form onSubmit={handleSubmit} className="space-y-4 border border-white/[0.24] rounded-[24px] px-6 py-8 md:p-[48px] md:pt-[40px] w-full md:min-w-[655px] md:max-w-[655px]">
               <div className="text-white text-[18px] font-light mb-6">
                 Twoje dane
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input
                   type="text"
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  placeholder="Imię"
-                  className="bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+                  placeholder="Arkadiusz"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-white focus:outline-none transition-all input-gradient-focus"
                 />
                 <input
                   type="text"
@@ -59,36 +61,38 @@ export default function Contact() {
                   value={formData.lastName}
                   onChange={handleChange}
                   placeholder="Nazwisko"
-                  className="bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus"
                 />
               </div>
-              <input
-                type="text"
-                name="position"
-                value={formData.position}
-                onChange={handleChange}
-                placeholder="Stanowisko"
-                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
-              />
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Numer telefonu (opcjonalny)"
-                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
-              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="text"
+                  name="position"
+                  value={formData.position}
+                  onChange={handleChange}
+                  placeholder="Stanowisko"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Numer telefonu (opcjonalny)"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus"
+                />
+              </div>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Mail"
-                className="w-full bg-transparent border border-[#333333] rounded-full px-6 py-3 text-white placeholder-[#72787E] focus:outline-none focus:border-[#9B7FEF] transition-colors"
+                className="w-full bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus mb-4"
               />
               <button
                 type="submit"
-                className="w-full mt-6 py-4 px-8 rounded-full bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE] text-black font-medium hover:opacity-90 transition-opacity"
+                className="w-full mt-6 py-4 px-8 rounded-full bg-gradient-to-r from-[#FFE4D6] to-[#D5BBF9] text-black font-medium hover:opacity-90 transition-opacity"
               >
                 Odbieram darmową ofertę
               </button>
