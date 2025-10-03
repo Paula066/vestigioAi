@@ -168,8 +168,8 @@ export default function Discount() {
               input[type="range"]::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 24px;
-                height: 24px;
+                width: 32px;
+                height: 32px;
                 background: #48DEEE;
                 border: 5px solid #AAF7FE;
                 border-radius: 50%;
@@ -181,15 +181,15 @@ export default function Discount() {
 
               @media (min-width: 768px) {
                 input[type="range"]::-webkit-slider-thumb {
-                  width: 29px;
-                  height: 29px;
+                  width: 34px;
+                  height: 34px;
                   border-width: 7px;
                 }
               }
 
               input[type="range"]::-moz-range-thumb {
-                width: 24px;
-                height: 24px;
+                width: 26px;
+                height: 26px;
                 background: #48DEEE;
                 border: 5px solid #AAF7FE;
                 border-radius: 50%;
@@ -201,8 +201,8 @@ export default function Discount() {
 
               @media (min-width: 768px) {
                 input[type="range"]::-moz-range-thumb {
-                  width: 29px;
-                  height: 29px;
+                  width: 31px;
+                  height: 31px;
                   border-width: 7px;
                 }
               }
