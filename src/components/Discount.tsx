@@ -53,7 +53,7 @@ export default function Discount() {
   ];
 
   return (
-    <div className="container mb-12 md:mb-[100px]">
+    <div className="container px-4 md:px-6 mb-12 md:mb-[100px]">
       <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-24">
         {/* Left Column */}
         <div className="flex-1">
@@ -109,8 +109,8 @@ export default function Discount() {
       </div>
 
       {/* Slider Section */}
-      <div className="mt-12 md:mt-[170px] flex flex-col md:flex-row items-start md:items-center py-6 md:py-[41px] px-4 md:px-[48px] rounded-2xl md:rounded-[24px] border border-[#72787E] bg-black">
-        <h3 className="text-white text-[28px] md:text-[36px] font-light leading-[32px] md:leading-[40px] mb-6 md:mb-0 md:mr-[60px] text-center md:text-left">
+      <div className="mt-12 md:mt-[170px] flex flex-col md:flex-row items-center md:items-center pt-4 pb-6 md:py-[41px] px-4 md:px-[48px] rounded-2xl md:rounded-[24px] border border-[#72787E] bg-black">
+        <h3 className="text-white text-[22px] sm:text-[28px] md:text-[36px] font-light pb-[60px] leading-[26px] sm:leading-[32px] md:leading-[40px] mb-4 md:mb-0 md:mr-[60px] text-center">
           Sprawdź budżet <br /> i rabat
         </h3>
         
@@ -140,18 +140,26 @@ export default function Discount() {
               input[type="range"] {
                 -webkit-appearance: none;
                 width: 100%;
-                height: 12px;
+                height: 8px;
                 background: rgba(192, 193, 224, 0.3);
-                border-radius: 8px;
+                border-radius: 6px;
                 outline: none;
                 position: relative;
                 padding: 0;
                 margin: 0;
               }
 
+              @media (min-width: 640px) {
+                input[type="range"] {
+                  height: 10px;
+                  border-radius: 7px;
+                }
+              }
+
               @media (min-width: 768px) {
                 input[type="range"] {
                   height: 16px;
+                  border-radius: 8px;
                 }
               }
 
@@ -168,15 +176,23 @@ export default function Discount() {
               input[type="range"]::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 32px;
-                height: 32px;
+                width: 24px;
+                height: 24px;
                 background: #48DEEE;
-                border: 5px solid #AAF7FE;
+                border: 4px solid #AAF7FE;
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
                 z-index: 2;
-                box-shadow: 0 0 20px rgba(72, 222, 238, 0.3);
+                box-shadow: 0 0 15px rgba(72, 222, 238, 0.3);
+              }
+
+              @media (min-width: 640px) {
+                input[type="range"]::-webkit-slider-thumb {
+                  width: 28px;
+                  height: 28px;
+                  border-width: 5px;
+                }
               }
 
               @media (min-width: 768px) {
@@ -188,15 +204,23 @@ export default function Discount() {
               }
 
               input[type="range"]::-moz-range-thumb {
-                width: 26px;
-                height: 26px;
+                width: 20px;
+                height: 20px;
                 background: #48DEEE;
-                border: 5px solid #AAF7FE;
+                border: 4px solid #AAF7FE;
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
                 z-index: 2;
-                box-shadow: 0 0 20px rgba(72, 222, 238, 0.3);
+                box-shadow: 0 0 15px rgba(72, 222, 238, 0.3);
+              }
+
+              @media (min-width: 640px) {
+                input[type="range"]::-moz-range-thumb {
+                  width: 24px;
+                  height: 24px;
+                  border-width: 5px;
+                }
               }
 
               @media (min-width: 768px) {
@@ -228,22 +252,22 @@ export default function Discount() {
                 } as React.CSSProperties}
               >
                 <div className="relative">
-                  <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-3 py-1 md:py-[3px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
+                  <div className="bg-[#212125] text-[#52DCEA] text-[20px] sm:text-[24px] md:text-[31px] font-normal px-2 sm:px-3 md:px-3 py-1 md:py-[3px] rounded-[24px] sm:rounded-[32px] md:rounded-[44px] whitespace-nowrap">
                     {value.toLocaleString()} zł
                   </div>
                   <img 
                     src={downIcon} 
                     alt="down" 
-                    className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-4 md:w-auto"
+                    className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-3 sm:w-4 md:w-auto"
                   />
                 </div>
               </output>
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-center md:text-left">
+        <div className="flex flex-row items-center gap-1 md:gap-2 text-center">
             <span 
-              className="text-[48px] md:text-[72px] font-normal leading-[1]"
+              className="text-[36px] sm:text-[48px] md:text-[72px] font-normal leading-[1]"
               style={{
                 background: 'linear-gradient(90deg, #9B7FEF 0%, #48DEEE 100%)',
                 WebkitBackgroundClip: 'text',
@@ -254,7 +278,7 @@ export default function Discount() {
               {calculateDiscount() + '%'}
             </span>
             <div className="text-white">
-              <div className="font-montserrat text-[16px] md:text-[18.96px] font-medium leading-[20px] md:leading-[23.628px]">
+              <div className="font-montserrat ml-3 md:ml-0 text-[14px] sm:text-[16px] md:text-[18.96px] font-medium leading-[18px] sm:leading-[20px] md:leading-[23.628px]">
                 Tyle rabatu <br /> otrzymasz
               </div>
             </div>

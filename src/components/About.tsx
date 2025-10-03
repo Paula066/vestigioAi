@@ -26,9 +26,9 @@ export default function About() {
           }
         `}
       </style>
-      <div className="container">
+      <div className="container px-4 md:px-6">
         <div className="">
-          <h1 className="font-['Inter'] text-[28px] md:text-[44px] leading-[36px] md:leading-[57px] font-normal tracking-[-1.12px] md:tracking-[-1.76px]">
+          <h1 className="font-['Inter'] text-[24px] sm:text-[28px] md:text-[44px] leading-[32px] sm:leading-[36px] md:leading-[57px] font-normal tracking-[-0.96px] sm:tracking-[-1.12px] md:tracking-[-1.76px]">
             <span style={gradientStyle}>
               Vestigio Media to
             </span>
@@ -80,28 +80,28 @@ export default function About() {
          <div className='w-full md:flex-1 flex flex-col md:ml-[60px] px-4 md:px-0'>
             <div className='flex flex-col md:flex-row gap-6 md:gap-8'>
                 <div className="h-fit flex-1 flex-col">
-                    <img src={effect} alt="Realni odbiorcy" className="w-10 h-10 mb-[15px]" />
-                    <h3 className="text-white text-xl font-medium mb-4">Realni odbiorcy, prawdziwe efekty</h3>
-                    <p className="text-gray-400">docierasz do osób aktywnie poszukujących informacji w Google, social mediach i na portalach lokalnych.</p>
+                    <img src={effect} alt="Realni odbiorcy" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 mb-3 sm:mb-4 md:mb-[15px]" />
+                    <h3 className="text-white text-lg sm:text-xl font-medium mb-3 sm:mb-4">Realni odbiorcy, prawdziwe efekty</h3>
+                    <p className="text-gray-400 text-sm sm:text-base">docierasz do osób aktywnie poszukujących informacji w Google, social mediach i na portalach lokalnych.</p>
                 </div>
             
                 <div className="h-fit flex-1 flex-col">
-                    <img src={visibility} alt="Widoczność" className="w-10 h-10 mb-[15px]" />
-                    <h3 className="text-white text-xl font-medium mb-4">Widoczność tam, gdzie decyduje klient</h3>
-                    <p className="text-gray-400">codzienne newsy, angażujące fanpage i rankingi firm, które budują Twoją wiarygodność.</p>
+                    <img src={visibility} alt="Widoczność" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 mb-3 sm:mb-4 md:mb-[15px]" />
+                    <h3 className="text-white text-lg sm:text-xl font-medium mb-3 sm:mb-4">Widoczność tam, gdzie decyduje klient</h3>
+                    <p className="text-gray-400 text-sm sm:text-base">codzienne newsy, angażujące fanpage i rankingi firm, które budują Twoją wiarygodność.</p>
                 </div>
             </div>
             <div className='flex flex-col md:flex-row gap-6 md:gap-8 mt-6 md:mt-8'>
                 <div className="h-fit flex-1 flex-col">
-                <img src={grow} alt="Wzrost w Google" className="w-10 h-10 mb-[15px]" />
-                <h3 className="text-white text-xl font-medium mb-4">Wzrost w Google i LLM</h3>
-                <p className="text-gray-400">mocne linki dofollow, trwałe publikacje i widoczność w rankingach, co wpływa na częstsze cytowania Twojego biznesu w ChatGPT, Claude, Google.</p>
+                <img src={grow} alt="Wzrost w Google" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 mb-3 sm:mb-4 md:mb-[15px]" />
+                <h3 className="text-white text-lg sm:text-xl font-medium mb-3 sm:mb-4">Wzrost w Google i LLM</h3>
+                <p className="text-gray-400 text-sm sm:text-base">mocne linki dofollow, trwałe publikacje i widoczność w rankingach, co wpływa na częstsze cytowania Twojego biznesu w ChatGPT, Claude, Google.</p>
                 </div>
             
                 <div className="h-fit flex-1 flex-col">
-                <img src={elastic} alt="Elastyczność" className="w-10 h-10 mb-[15px]" />
-                <h3 className="text-white text-xl font-medium mb-4">Elastyczność bez dodatkowych kosztów</h3>
-                <p className="text-gray-400">działaj lokalnie albo ogólnopolsko w oparciu o jedną, skalowalną infrastrukturę.</p>
+                <img src={elastic} alt="Elastyczność" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 mb-3 sm:mb-4 md:mb-[15px]" />
+                <h3 className="text-white text-lg sm:text-xl font-medium mb-3 sm:mb-4">Elastyczność bez dodatkowych kosztów</h3>
+                <p className="text-gray-400 text-sm sm:text-base">działaj lokalnie albo ogólnopolsko w oparciu o jedną, skalowalną infrastrukturę.</p>
                 </div>
             </div>
          </div>

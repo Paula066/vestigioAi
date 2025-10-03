@@ -4,49 +4,49 @@ import senuto from '../assets/senuto.svg';
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden pt-[90px]">
-      <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
-            <div className="text-center md:text-left mr-[100px]">
-              <h1 className="text-4xl md:text-5xl whitespace-nowrap lg:text-7xl font-light tracking-tight text-white">
+    <div className="relative overflow-hidden  pt-[90px]">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+            <div className="text-center md:text-left md:mr-[50px] lg:mr-[100px]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-white">
                 Cała Polska
                 <br />
                 linkuje do Ciebie
               </h1>
-              <p className="mt-6 text-[16px] md:text-[18px] leading-[28px] font-normal text-[#959595] font-inter">
+              <p className="mt-4 md:mt-6 text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] font-normal text-[#959595] font-inter">
                 Pokaż się na niezależnych portalach informacyjnych
                 <br className="hidden md:block" />
                 z wysokim ruchem i pozycją w Google.
               </p>
-              <div className="mt-[32px] md:mt-[48px]">
+              <div className="mt-[24px] md:mt-[32px] lg:mt-[48px]">
                 <Link
                   to="/oferta"
-                  className="inline-block rounded-full font-medium px-[32px] md:px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity button-animate"
+                  className="inline-block rounded-full font-medium px-[24px] sm:px-[32px] md:px-[48px] py-2.5 md:py-3 text-[15px] sm:text-base font-light text-black hover:opacity-90 transition-opacity button-animate"
                 >
                   Odbieram darmową ofertę
                 </Link>
-                <p className="mt-4 text-[18px] font-light">
+                <p className="mt-3 md:mt-4 text-[16px] md:text-[18px] font-light">
                   <span className="font-medium text-white">365</span> <span className="text-[#959595]">portali w</span> <span className="font-medium text-white">340</span> <span className="text-[#959595]">miejscach w Polsce</span>
                 </p>
               </div>
             </div>
-            <div className=" md:w-auto relative map-container">
+            <div className="w-full sm:w-[80%] md:w-auto relative map-container">
               <img src={map} alt="Vestigio" className="w-full h-auto map-animate" />
             </div>
         </div>
-        <div className="mt-[32px] md:mt-[43px] flex flex-col md:flex-row justify-between items-center md:items-end gap-6 md:gap-x-[120px] text-sm">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-[48px] text-center md:text-left">
+        <div className="mt-[24px] md:mt-[32px] lg:mt-[43px] flex flex-col md:flex-row justify-between items-center md:items-end gap-4 md:gap-6 lg:gap-x-[120px] text-sm">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-[48px] text-center md:text-left">
               <div>
-                <div className="text-[18px] leading-[30px] font-light text-white">500 000</div>
-                <div className="text-[14px] md:text-[16px] leading-[22px] text-zinc-400 max-w-[200px]">szacowany miesięczny ruch całej sieci</div>
+                <div className="text-[16px] md:text-[18px] leading-[24px] md:leading-[30px] font-light text-white">500 000</div>
+                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 max-w-[200px]">szacowany miesięczny ruch całej sieci</div>
               </div>
               <div>
-                <div className="text-[18px] leading-[30px] font-light text-white">175+</div>
-                <div className="text-[14px] md:text-[16px] leading-[22px] text-zinc-400 max-w-[200px]">portali z szacowanym miesięcznym ruchem 1000+ wejść / msc</div>
+                <div className="text-[16px] md:text-[18px] leading-[24px] md:leading-[30px] font-light text-white">175+</div>
+                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 max-w-[200px]">portali z szacowanym miesięcznym ruchem 1000+ wejść / msc</div>
               </div>
             </div>
-            <div className="text-[14px] text-zinc-400 flex items-center whitespace-nowrap gap-x-1">
-              Na podstawie danych z <img src={senuto} alt="Senuto" className="inline-block" />
+            <div className="text-[12px] sm:text-[14px] text-zinc-400 flex items-center whitespace-nowrap gap-x-1">
+              Na podstawie danych z <img src={senuto} alt="Senuto" className="inline-block h-4 md:h-auto" />
             </div>
         </div>
       </div>

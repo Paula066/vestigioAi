@@ -32,17 +32,17 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-black py-24">
-      <div className="container">
-      <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8">
+    <section className=" bg-black md:py-12 md:py-24">
+      <div className="container px-4 md:px-6">
+      <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8  md:text-left">
               Odbierz darmową ofertę
             </h2>
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
           
           {/* Left Column - Form */}
-          <div className="flex-1">
+          <div className="flex-1 flex justify-center md:justify-start">
            
-            <form onSubmit={handleSubmit} className="space-y-4 border border-white/[0.24] rounded-[24px] px-6 py-8 md:p-[48px] md:pt-[40px] w-full md:min-w-[655px] md:max-w-[655px]">
+            <form onSubmit={handleSubmit} className="space-y-4 border border-white/[0.24] rounded-[24px] px-6 py-8 md:p-[48px] md:pt-[40px] w-full max-w-[655px]">
               <div className="text-white text-[18px] font-light mb-6">
                 Twoje dane
               </div>
@@ -92,7 +92,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="w-full mt-6 py-4 px-8 rounded-full text-black font-medium hover:opacity-90 transition-opacity button-animate cursor-pointer"
+                className="w-full mt-6 py-3 md:py-4 px-6 md:px-8 rounded-full text-black text-[15px] md:text-base font-medium hover:opacity-90 transition-opacity button-animate cursor-pointer"
               >
                 Odbieram darmową ofertę
               </button>
@@ -100,10 +100,10 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Contact Info */}
-          <div className="flex-1">
-            <div className="flex flex-col items-start">
-              <div className="flex gap-10 mb-1">
-                <div className="flex flex-col gap-3">
+          <div className="flex-1 flex justify-center md:justify-start">
+            <div className="flex flex-col items-center md:items-start w-full md:w-auto">
+              <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-6 md:gap-10 mb-1">
+                <div className="flex flex-col gap-3 items-center md:items-start text-center md:text-left">
                 <div className="flex flex-col">
                   <h3 className="text-white text-[23.6px] font-normal leading-[29.53px] mb-2">
                     Sara Gamrot
@@ -115,17 +115,17 @@ export default function Contact() {
                 <div className="mb-[30px]">
                 <a
                   href="mailto:s.gamrot@vestigio.ai"
-                  className="text-white text-[20px] font-extralight leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors"
+                  className="text-white text-[18px] md:text-[20px] font-extralight leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors block"
                 >
                   s.gamrot@vestigio.ai
                 </a>
-                <div className="text-white text-[20px] font-extralight leading-[28px] tracking-[0.4px]">
+                <div className="text-white text-[18px] md:text-[20px] font-extralight leading-[28px] tracking-[0.4px]">
                   514 019 528
                 </div>
               </div>
                 </div>
                 <div 
-                  className="w-[140px] h-[140px] rounded-full overflow-hidden"
+                  className="w-[120px] h-[120px] md:w-[140px] md:h-[140px] rounded-full overflow-hidden"
                   style={{
                     border: '2px solid transparent',
                     backgroundImage: 'linear-gradient(#000, #000), linear-gradient(90deg, #EF7FA3, #F3B4A0, #48DEEE)',
@@ -143,7 +143,7 @@ export default function Contact() {
 
               
 
-              <div className="mb-6">
+              <div className="mb-6 text-center md:text-left max-w-[400px] md:max-w-none">
                 <h4 className="text-white text-[23.6px] font-normal leading-[29.53px] mb-4">
                   Konsultacja
                 </h4>
@@ -152,7 +152,7 @@ export default function Contact() {
                 </p>
                 <a
                   href="#konsultacja"
-                  className="relative text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
+                  className="relative inline-block text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
                 >
                   Umawiam się na konsultację
                 </a>

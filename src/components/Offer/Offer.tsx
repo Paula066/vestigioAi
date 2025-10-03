@@ -163,7 +163,7 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
 export default function Offer() {
   const [expandedSection, setExpandedSection] = useState<number | null>(null);
   return (
-    <div className="container mb-[166px]">
+    <div className="container px-4 md:px-6 mb-[60px] md:mb-[166px]">
       <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] text-white mb-[54px]">
         Poznaj naszą ofertę
       </h2>

@@ -22,7 +22,7 @@ export default function App() {
         <Header />
         <main>
           <Hero />
-          <div className='pt-[120px]'>
+          <div className='pt-[30px] md:pt-[120px]'>
             <About />
           </div>
           <div className='mb-[158px]'>

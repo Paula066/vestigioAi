@@ -42,8 +42,8 @@ export default function FAQ() {
 
   return (
     <section className="bg-black py-16 md:py-24">
-      <div className="container">
-        <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] text-white mb-8 md:mb-12">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-[28px] sm:text-[32px] md:text-[44px] font-light leading-[36px] sm:leading-[42px] md:leading-[57px] text-white mb-6 sm:mb-8 md:mb-12">
           Najczęściej zadawane pytania
         </h2>
         
@@ -55,15 +55,15 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full flex items-center justify-between py-2 md:py-4 text-left opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
+                className="w-full flex items-center justify-between py-3 md:py-4 text-left opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
               >
-                <span className="text-white text-[18px] md:text-[20px] font-light pr-4">
+                <span className="text-white text-[16px] sm:text-[18px] md:text-[20px] font-light pr-4">
                   {item.question}
                 </span>
                 <img 
                   src={questionIcon} 
                   alt="toggle" 
-                  className={`w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -75,7 +75,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p className="text-white text-[14px] md:text-[16px] font-light leading-[20px] md:leading-[24px] pb-6 md:pb-8 whitespace-pre-line">
+                  <p className="text-white text-[13px] sm:text-[14px] md:text-[16px] font-light leading-[19px] sm:leading-[20px] md:leading-[24px] pb-4 sm:pb-6 md:pb-8 whitespace-pre-line">
                     {item.answer}
                   </p>
                 </div>

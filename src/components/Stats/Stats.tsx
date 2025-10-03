@@ -3,7 +3,7 @@ import graphic2 from '../../assets/graphic2.svg';
 
 export default function Stats() {
   return (
-    <div className="container">
+    <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="flex flex-row items-center rounded-[12px] overflow-hidden" style={{
             backgroundImage: 'url("/blue-gradient.png")',

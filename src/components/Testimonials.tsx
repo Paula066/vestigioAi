@@ -5,11 +5,10 @@ interface TestimonialProps {
   text: string;
   author: string;
   position: string;
-  company: string;
   img: string;
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({ text, author, position, company, img }) => (
+const Testimonial: React.FC<TestimonialProps> = ({ text, author, position, img }) => (
   <div className="flex flex-col p-4 md:p-6 bg-black/30 rounded-2xl backdrop-blur-sm">
     <img src={quotesIcon} alt="quote" className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4" />
     <p className="text-white text-[16px] md:text-[18px] font-light leading-[24px] md:leading-[26px] mb-6 md:mb-8">{text}</p>
@@ -53,9 +52,9 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-12 md:py-24 bg-black">
-      <div className="container">
-        <h2 className="text-white text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] mb-8 md:mb-[48px] text-center md:text-left">
+    <section className="md:py-12 md:py-24 bg-black">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-white text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] mb-8 md:mb-[48px]  md:text-left">
           Co mówią o nas nasi partnerzy
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
