@@ -92,7 +92,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="w-full mt-6 py-4 px-8 rounded-full bg-gradient-to-r from-[#FFE4D6] to-[#D5BBF9] text-black font-medium hover:opacity-90 transition-opacity"
+                className="w-full mt-6 py-4 px-8 rounded-full text-black font-medium hover:opacity-90 transition-opacity button-animate"
               >
                 Odbieram darmową ofertę
               </button>

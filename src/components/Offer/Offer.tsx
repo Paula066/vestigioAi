@@ -202,7 +202,7 @@ export default function Offer() {
         <p className="text-white text-[20px] sm:text-[24px] font-light leading-[24px] sm:leading-[28px] tracking-[-1px] sm:tracking-[-1.2px] text-center sm:text-left">
           Skontaktuj się po więcej konkretów. Bez zobowiązań.
         </p>
-        <button className="w-full sm:w-auto inline-block rounded-full px-[32px] sm:px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity bg-gradient-to-r from-[#FFE4D6] to-[#D5BBF9]">
+        <button className="w-full sm:w-auto inline-block rounded-full px-[32px] sm:px-[48px] py-3 text-base font-bold text-black hover:opacity-90 transition-opacity button-animate">
           Odbierz darmową ofertę
         </button>
       </div>
