@@ -46,7 +46,7 @@ export default function Discount() {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-[166px]">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-[100px]">
       <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
         {/* Left Column */}
         <div className="flex-1">
@@ -102,13 +102,13 @@ export default function Discount() {
       </div>
 
       {/* Slider Section */}
-      <div className="mt-[170px] flex items-center">
-        <h3 className="text-white text-[44px] font-normal leading-[57px] mb-8 mr-[60px]">
+      <div className="mt-[170px] flex items-center py-[41px] px-[48px] rounded-[24px] border border-[#72787E] bg-black">
+        <h3 className="text-white text-[44px] font-light leading-[57px] mr-[60px]">
           Sprawdź budżet <br /> i rabat
         </h3>
         
-        <div className="relative mb-12 flex-1">
-          <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px]">
+        <div className="relative flex-1 mr-[48px]">
+          <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px] h-[29px] max-w-[370px]">
             <div 
               className="absolute"
               style={{ 
@@ -176,16 +176,27 @@ export default function Discount() {
             />
           </div>
 
-          <div className="flex flex-1 justify-end items-center gap-2">
-            <span className="text-[#48DEEE] text-[72px] font-normal">
-              {calculateDiscount()}
+         
+        </div>
+        <div className="flex flex-1 items-center gap-2">
+            <span 
+              className="text-[72px] font-normal"
+              style={{
+                background: 'linear-gradient(90deg, #9B7FEF 0%, #48DEEE 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >
+              {calculateDiscount() + '%'}
             </span>
             <div className="text-white">
-              <span className="text-[44px] font-normal">%</span>
-              <div className="text-[16px] leading-[20px]">Tyle rabatu otrzymasz</div>
+
+              <div className="font-montserrat text-[18.96px] font-medium leading-[23.628px]">
+                Tyle rabatu <br /> otrzymasz
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
