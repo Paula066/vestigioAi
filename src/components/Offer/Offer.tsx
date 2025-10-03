@@ -24,7 +24,7 @@ interface ExpandedContentProps {
 const ExpandedContent = ({ type }: ExpandedContentProps) => {
   if (type === 'pricing') {
     return (
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+      <div className="md:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
           <h4 className="text-white text-[20px] sm:text-[24px]">Standard</h4>
           <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">240 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
@@ -69,7 +69,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
                 <div>Czas emisji artykułu: 12 miesięcy</div>
                 <div>Ilość linków w artykule: max 3</div>
-                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-3 h-3 sm:w-4 sm:h-4" /></div>
+                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4" /></div>
                 <div>Promocja na stronie głównej przez 7 dni</div>
               </div>
             </div>
@@ -128,24 +128,24 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
       case 'purple-cream':
         return "bg-gradient-to-r from-[#FAFADB] to-[#EFACBB] bg-clip-text text-transparent";
       default:
-        return "text-white";
+        return "text-[#C2C2C2]";
     }
   };
 
-  const titleClasses = `text-[24px] sm:text-[32px] font-light ${getGradientClasses()}`;
-  const priceClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
+  const titleClasses = `text-[15px] sm:text-[24px] md:text-[32px] font-light ${getGradientClasses()}`;
+  const priceClasses = `text-[15px] sm:text-[18px] md:text-[20px] font-light text-[#C2C2C2] md:text-transparent md:bg-clip-text ${gradientType ? 'md:bg-gradient-to-r md:from-[#9B7FEF] md:to-[#48DEEE]' : ''} ${gradientType === 'green' ? 'md:from-[#9FCBA2] md:to-[#FAFADB]' : ''} ${gradientType === 'purple-cream' ? 'md:from-[#FAFADB] md:to-[#EFACBB]' : ''}`;
 
   return (
     <div 
       onClick={onToggle}
-      className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[32px] sm:pb-[68px] hover:shadow-[inset_0_60px_40px_-8px_rgba(255,255,255,0.15)] transition-shadow cursor-pointer ${className}`}
+      className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[30px] sm:pb-[68px] hover:shadow-[inset_0_60px_40px_-8px_rgba(255,255,255,0.15)] transition-shadow cursor-pointer ${className}`}
     >
       <div className="flex items-center justify-between hover:opacity-80 transition-opacity">
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
-            className={`cursor-pointer transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`}
+            className={`hidden sm:block cursor-pointer transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`}
           >
-            <img src={arrowIcon} alt="Expand" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src={arrowIcon} alt="Expand" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
           <h3 className={twMerge(titleClasses)}>{title}</h3>
         </div>
@@ -164,7 +164,7 @@ export default function Offer() {
   const [expandedSection, setExpandedSection] = useState<number | null>(null);
   return (
     <div className="container px-4 md:px-6 mb-[60px] md:mb-[166px]">
-      <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] text-white mb-[54px]">
+      <h2 className="text-[32px] md:text-[44px] font-light leading-[42px] md:leading-[57px] tracking-[-1.28px] md:tracking-[-1.76px] text-white mb-[40px] md:mb-8 md:mb-[54px]">
         Poznaj naszą ofertę
       </h2>
 
@@ -195,7 +195,7 @@ export default function Offer() {
           arrowIcon={arrowDown3}
           gradientType="purple-cream"
           expandedContentType="creation"
-          className="border-b border-[#72787E] rounded-b-[24px] !pb-[48px]"
+          className="border-b border-[#72787E] rounded-b-[24px] !pb-4 sm:!pb-[48px]"
         />
       </div>
 
