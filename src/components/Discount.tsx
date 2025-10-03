@@ -78,7 +78,7 @@ export default function Discount() {
         
           <div className="relative mb-12 flex-1">
             <div className="absolute left-1/2 -top-16 transform -translate-x-1/2">
-              <div className="bg-[#1E1E1E] text-[#48DEEE] text-[44px] font-normal px-8 py-4 rounded-[32px] whitespace-nowrap">
+              <div className="bg-[#212125] text-[#52DCEA] text-[31px] font-normal px-4 py-[6px] rounded-[44px] whitespace-nowrap">
                 {value.toLocaleString()} zł
               </div>
             </div>
