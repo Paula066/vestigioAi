@@ -12,10 +12,10 @@ const DISCOUNT_TIERS = [
 ] as const;
 
 const SLIDER_CONFIG = {
-  min: 1500,
+  min: 0,
   max: 50000,
   step: 100,
-  initialValue: 3000
+  initialValue: 0
 } as const;
 
 export default function Discount() {
