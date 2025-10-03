@@ -58,18 +58,18 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
         <div className="text-[#C2C2C2] text-[14px] sm:text-base mb-8 md:max-w-[870px]">
           Wypromuj swoje artykuły u nas. Wszystkie artykuły oznaczane są nakładką  graficzną Artykuł sponsorowany, zgodną z wymogami prawnymi.
         </div>
-        <div className="flex justify-between items-center">
-          <div className="flex-1 flex items-center">
-            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-0">
+          <div className="w-full sm:flex-1 flex items-center justify-center">
+            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[280px] sm:max-w-[400px]" />
           </div>
-          <div className="flex-1">
+          <div className="w-full sm:flex-1">
             <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-              <h4 className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
+              <h4 className="font-inter text-[32px] sm:text-[44px] font-normal leading-[38px] sm:leading-[57px] tracking-[-1.28px] sm:tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
               <div className="font-inter text-[20px] font-medium leading-[28px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-4">120 - 179 zł</div>
               <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
                 <div>Czas emisji artykułu: 12 miesięcy</div>
                 <div>Ilość linków w artykule: max 3</div>
-                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-4 h-4" /></div>
+                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-3 h-3 sm:w-4 sm:h-4" /></div>
                 <div>Promocja na stronie głównej przez 7 dni</div>
               </div>
             </div>
@@ -132,21 +132,21 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
     }
   };
 
-  const titleClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
+  const titleClasses = `text-[24px] sm:text-[32px] font-light ${getGradientClasses()}`;
   const priceClasses = `text-[16px] sm:text-[20px] font-light ${getGradientClasses()}`;
 
   return (
-    <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[24px] sm:p-[48px] pb-[48px] sm:pb-[68px] ${className}`}>
+    <div className={`rounded-t-[24px] border-t border-r border-l border-[#72787E] bg-black mt-[-20px] p-[16px] sm:p-[48px] pb-[32px] sm:pb-[68px] ${className}`}>
       <div 
         onClick={onToggle}
         className="flex items-center justify-between cursor-pointer">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button 
             className={`cursor-pointer transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`}
           >
-            <img src={arrowIcon} alt="Expand" className="w-6 h-6" />
+            <img src={arrowIcon} alt="Expand" className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
-          <h3 className={twMerge(titleClasses, 'text-[32px]')}>{title}</h3>
+          <h3 className={twMerge(titleClasses)}>{title}</h3>
         </div>
         <span className={priceClasses}>{price}</span>
       </div>
@@ -198,11 +198,11 @@ export default function Offer() {
         />
       </div>
 
-      <div className="mt-12 flex flex-col sm:flex-row items-center justify-between">
-        <p className="text-white text-[24px] font-light leading-[28px] tracking-[-1.2px] mb-4 sm:mb-0">
+      <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-white text-[20px] sm:text-[24px] font-light leading-[24px] sm:leading-[28px] tracking-[-1px] sm:tracking-[-1.2px] text-center sm:text-left">
           Skontaktuj się po więcej konkretów. Bez zobowiązań.
         </p>
-        <button className="inline-block rounded-full px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(90deg, #FFE4D6 0%, #D5BBF9 100%)' }}>
+        <button className="w-full sm:w-auto inline-block rounded-full px-[32px] sm:px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(90deg, #FFE4D6 0%, #D5BBF9 100%)' }}>
           Odbierz darmową ofertę
         </button>
       </div>
