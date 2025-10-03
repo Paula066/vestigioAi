@@ -6,9 +6,26 @@ import visibility from '../assets/visibility.svg';
 import grow from '../assets/grow.svg';
 import elastic from '../assets/elastic.svg';
 
+const gradientStyle = {
+  background: 'linear-gradient(90deg, #BEC5DE 0%, #8E9FC7 33.18%, #8BAECA 66.83%, #C7E3E3 100%, #BEC5DE 100%)',
+  WebkitBackgroundClip: 'text',
+  backgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundSize: '200% 100%',
+  animation: 'gradient 8s linear infinite',
+};
+
 export default function About() {
   return (
     <section className="relative py-20">
+      <style>
+        {`
+          @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+          }
+        `}
+      </style>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="">
           <h1 style={{
@@ -19,35 +36,20 @@ export default function About() {
             lineHeight: '57px',
             letterSpacing: '-1.76px'
           }}>
-            <span style={{
-              background: 'linear-gradient(90deg, #BEC5DE 0%, #8E9FC7 33.18%, #8BAECA 66.83%, #C7E3E3 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={gradientStyle}>
               Vestigio Media to
             </span>
             {' '}
             sieć lokalnych portali i rankingów firm,
             {' '}
-            <span style={{
-              background: 'linear-gradient(90deg, #BEC5DE 0%, #8E9FC7 33.18%, #8BAECA 66.83%, #C7E3E3 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={gradientStyle}>
               która łączy Twoją markę z realnymi odbiorcami i daje 
             </span>
             <span className="text-white pl-3">
               maksymalną widoczność w
             </span>
             {' '}
-            <span style={{
-              background: 'linear-gradient(90deg, #BEC5DE 0%, #8E9FC7 33.18%, #8BAECA 66.83%, #C7E3E3 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={gradientStyle}>
               Google, social mediach i AI.
             </span>
           </h1>
