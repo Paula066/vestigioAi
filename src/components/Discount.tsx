@@ -152,14 +152,15 @@ export default function Discount() {
               input[type="range"]::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 32px;
-                height: 32px;
+                width: 29px;
+                height: 29px;
                 background: #48DEEE;
+                border: 7px solid #AAF7FE;
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
                 z-index: 2;
-                box-shadow: 0 0 20px rgba(72, 222, 238, 0.5);
+                box-shadow: 0 0 20px rgba(72, 222, 238, 0.3);
               }
             `}</style>
             <input
