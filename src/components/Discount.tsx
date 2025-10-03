@@ -1,6 +1,12 @@
 import checkedIcon from '../assets/checkedIcon2.svg';
+import React from 'react';
 
 export default function Discount() {
+  const [value, setValue] = React.useState(3000);
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(Number(e.target.value));
+  };
   const benefits = [
     'Start od 5 000 zł netto',
     'Zero presji – publikujesz, kiedy chcesz',
@@ -25,8 +31,8 @@ export default function Discount() {
               </div>
             </div>
             <div className="text-white text-[16px] font-normal leading-[20px]">
-            Im więcej kupisz tym mniej wydasz!
-          </div>
+              Im więcej kupisz tym mniej wydasz!
+            </div>
           </div>
 
           <div className="mb-8">
@@ -37,11 +43,9 @@ export default function Discount() {
               </div>
             </div>
             <div className="text-white text-[16px] font-normal leading-[20px]">
-                Więcej się opłaca!
+              Więcej się opłaca!
+            </div>
           </div>
-          </div>
-
-          
         </div>
 
         {/* Right Column */}
@@ -64,6 +68,79 @@ export default function Discount() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Slider Section */}
+      <div className="mt-[170px] flex">
+        <h3 className="text-white text-[44px] font-normal leading-[57px] mb-8 mr-[60px]">
+          Sprawdź budżet <br /> i rabat
+        </h3>
+        
+          <div className="relative mb-12 flex-1">
+            <div className="absolute left-1/2 -top-16 transform -translate-x-1/2">
+              <div className="bg-[#1E1E1E] text-[#48DEEE] text-[44px] font-normal px-8 py-4 rounded-[32px] whitespace-nowrap">
+                {value.toLocaleString()} zł
+              </div>
+            </div>
+
+            <div className="relative p-2 flex-1 bg-[#363645] rounded-[999px]">
+              <style jsx>{`
+                input[type="range"] {
+                  -webkit-appearance: none;
+                  width: 100%;
+                  height: 16px;
+                  background: #333333;
+                  border-radius: 8px;
+                  outline: none;
+                  position: relative;
+                }
+
+                input[type="range"]::before {
+                  content: '';
+                  position: absolute;
+                  height: 100%;
+                  left: 0;
+                  width: var(--progress);
+                  background: linear-gradient(90deg, #9B7FEF, #48DEEE);
+                  border-radius: 8px;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 48px;
+                  height: 48px;
+                  background: #48DEEE;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  box-shadow: 0 0 20px rgba(72, 222, 238, 0.5);
+                  position: relative;
+                  z-index: 2;
+                }
+              `}</style>
+              <input
+                type="range"
+                min="1000"
+                max="50000"
+                value={value}
+                onChange={handleChange}
+                className="w-full"
+                style={{ 
+                  '--progress': `${((value - 1000) / (50000 - 1000)) * 100}%`
+                } as React.CSSProperties}
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-1 justify-end items-center gap-2">
+            <span className="text-[#48DEEE] text-[72px] font-normal">
+              {Math.round((value / 50000) * 45)}
+            </span>
+            <div className="text-white">
+              <span className="text-[44px] font-normal">%</span>
+              <div className="text-[16px] leading-[20px]">Tyle rabatu otrzymasz</div>
+            </div>
+          </div>
       </div>
     </div>
   );

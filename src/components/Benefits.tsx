@@ -35,7 +35,7 @@ export default function Benefits() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-[166px]">
-      <h2 className="text-[44px] font-light leading-[57px] tracking-[-1.76px] mb-[54px] bg-gradient-to-r from-[#9FCBA2] to-[#FAFADB] bg-clip-text text-transparent">
+      <h2 className="text-[44px] font-light leading-[57px] text-white mb-[54px]">
         Co zyskujesz z Vestigio Media?
       </h2>
 
