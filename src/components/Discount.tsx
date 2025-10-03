@@ -116,36 +116,43 @@ export default function Discount() {
         
         <div className="relative flex-1 w-full md:mr-[48px] mb-6 md:mb-0">
           <div className="relative p-2 py-1 flex-1 bg-[#363645] rounded-[999px] h-[29px] max-w-full md:max-w-[370px]">
-            <div 
-              className="absolute -top-[60px] md:-top-[80px]"
-              style={{ 
-                left: `${calculateBubblePosition()}%`,
-                transform: 'translateX(-50%)'
-              }}
-            >
-              <div className="relative">
-                <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-4 py-1 md:py-[6px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
-                  {value.toLocaleString()} zł
-                </div>
-                <img 
-                  src={downIcon} 
-                  alt="down" 
-                  className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-4 md:w-auto"
-                />
-              </div>
-            </div>
             <style>{`
+              .slider-container {
+                position: relative;
+              }
+
+              .slider-bubble {
+                position: absolute;
+                left: calc(var(--thumb-position) * 1%);
+                top: -50px;
+                transform: translateX(-50%);
+                pointer-events: none;
+                z-index: 10;
+                will-change: left;
+              }
+
+              @media (min-width: 768px) {
+                .slider-bubble {
+                  top: -65px;
+                }
+              }
+
               input[type="range"] {
                 -webkit-appearance: none;
                 width: 100%;
                 height: 12px;
-                @media (min-width: 768px) {
-                  height: 16px;
-                }
                 background: #333333;
                 border-radius: 8px;
                 outline: none;
                 position: relative;
+                padding: 0;
+                margin: 0;
+              }
+
+              @media (min-width: 768px) {
+                input[type="range"] {
+                  height: 16px;
+                }
               }
 
               input[type="range"]::before {
@@ -163,34 +170,75 @@ export default function Discount() {
                 appearance: none;
                 width: 24px;
                 height: 24px;
-                @media (min-width: 768px) {
-                  width: 29px;
-                  height: 29px;
-                }
                 background: #48DEEE;
                 border: 5px solid #AAF7FE;
-                @media (min-width: 768px) {
-                  border-width: 7px;
-                }
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
                 z-index: 2;
                 box-shadow: 0 0 20px rgba(72, 222, 238, 0.3);
               }
+
+              @media (min-width: 768px) {
+                input[type="range"]::-webkit-slider-thumb {
+                  width: 29px;
+                  height: 29px;
+                  border-width: 7px;
+                }
+              }
+
+              input[type="range"]::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+                background: #48DEEE;
+                border: 5px solid #AAF7FE;
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+                box-shadow: 0 0 20px rgba(72, 222, 238, 0.3);
+              }
+
+              @media (min-width: 768px) {
+                input[type="range"]::-moz-range-thumb {
+                  width: 29px;
+                  height: 29px;
+                  border-width: 7px;
+                }
+              }
             `}</style>
-            <input
-              type="range"
-              min={SLIDER_CONFIG.min}
-              max={SLIDER_CONFIG.max}
-              step={SLIDER_CONFIG.step}
-              value={value}
-              onChange={handleChange}
-              className="w-full"
-              style={{ 
-                '--progress': `${calculateProgress()}%`
-              } as React.CSSProperties}
-            />
+            <div className="slider-container">
+              <input
+                type="range"
+                min={SLIDER_CONFIG.min}
+                max={SLIDER_CONFIG.max}
+                step={SLIDER_CONFIG.step}
+                value={value}
+                onChange={handleChange}
+                className="w-full slider-input"
+                style={{ 
+                  '--progress': `${calculateProgress()}%`,
+                  '--thumb-position': `${calculateProgress()}`
+                } as React.CSSProperties}
+              />
+              <output 
+                className="slider-bubble"
+                style={{ 
+                  left: `calc(${calculateProgress()}% + (${12 - calculateProgress() * 0.24}px))`
+                } as React.CSSProperties}
+              >
+                <div className="relative">
+                  <div className="bg-[#212125] text-[#52DCEA] text-[24px] md:text-[31px] font-normal px-3 md:px-4 py-1 md:py-[6px] rounded-[32px] md:rounded-[44px] whitespace-nowrap">
+                    {value.toLocaleString()} zł
+                  </div>
+                  <img 
+                    src={downIcon} 
+                    alt="down" 
+                    className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-4 md:w-auto"
+                  />
+                </div>
+              </output>
+            </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-center md:text-left">
