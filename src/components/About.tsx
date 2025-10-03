@@ -1,4 +1,4 @@
-import React from 'react';
+
 import foundersBg from '../assets/foundersBg.svg';
 import gradient from '../assets/gradient.svg';
 import effect from '../assets/effect.svg';
@@ -116,33 +116,33 @@ export default function About() {
          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
-          <div className=" flex rounded-[12px]" style={{
-            backgroundImage: 'url("/bg.png")',
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+           <div className="flex flex-col md:flex-row rounded-[12px]" style={{
+            backgroundImage: 'url("/blue-gradient.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}>
-            <div className='pl-8 pt-8 pb-8'>
-                <div className="text-[52px] font-medium leading-[32px] font-light mb-4 text-black">365</div>
-                <div className="text-[18px] font-medium leading-[22px] mb-[32px] text-black">lokalnych portali w całej <br /> Polsce, w których pojawi się Twoja firma.</div>
-                <div className="text-base font-light leading-[20px] text-black text-[-14px]">Portale obejmują swoim zasięgiem <br /> aż 365 miejscowości.</div>
+            <div className='px-4 pt-6 pb-4 md:pl-8 md:pt-8 md:pb-8'>
+                 <div className="text-[32px] md:text-[52px] font-medium leading-[24px] md:leading-[32px] font-light mb-4 text-black">365</div>
+                 <div className="text-[16px] md:text-[18px] font-medium leading-[20px] md:leading-[22px] mb-[24px] md:mb-[32px] text-black">lokalnych portali w całej <br className="hidden md:block" /> Polsce, w których pojawi się Twoja firma.</div>
+                 <div className="text-[14px] md:text-base font-light leading-[18px] md:leading-[20px] text-black">Portale obejmują swoim zasięgiem <br className="hidden md:block" /> aż 365 miejscowości.</div>
             </div>
 
-                <img src={graphic1} alt="Bg" />
+                <img src={graphic1} alt="Bg" className="h-[150px] md:h-auto" />
 
           </div>
 
-          <div className="flex rounded-[12px]" style={{
-           backgroundImage: 'url("/box.png")',
+           <div className="flex flex-col md:flex-row rounded-[12px]" style={{
+           backgroundImage: 'url("/pink-gradient.png")',
            backgroundSize: 'cover',
            backgroundPosition: 'center'
           }}>
-            <div className='pl-8 pt-8 pb-8'>
-            <div className="text-[52px] font-medium leading-[32px] font-light mb-4 text-black">87 174</div>
-            <div className="text-[18px] font-medium leading-[22px] mb-[32px] text-black">lokalnych rankingów firm w całej Polsce, a Ty możesz być wśród nich.</div>
-            <div className="text-base font-light leading-[20px] text-black text-[-14px]">Rankingi to doskonałe miejsce na zaprezentowanie swojej firmy.</div>
+            <div className='px-4 pt-6 pb-4 md:pl-8 md:pt-8 md:pb-8'>
+             <div className="text-[32px] md:text-[52px] font-medium leading-[24px] md:leading-[32px] font-light mb-4 text-black">87 174</div>
+             <div className="text-[16px] md:text-[18px] font-medium leading-[20px] md:leading-[22px] mb-[24px] md:mb-[32px] text-black">lokalnych rankingów firm w całej Polsce, a Ty możesz być wśród nich.</div>
+             <div className="text-[14px] md:text-base font-light leading-[18px] md:leading-[20px] text-black">Rankingi to doskonałe miejsce na zaprezentowanie swojej firmy.</div>
             </div>
-            <img src={graphic2} alt="Bg" />
+            <img src={graphic2} alt="Bg" className="h-[150px] md:h-auto" />
           </div>
         </div>
       </div>
