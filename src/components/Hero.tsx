@@ -25,6 +25,9 @@ export default function Hero() {
                 >
                   Odbieram darmową ofertę
                 </Link>
+                <p className="mt-4 text-[18px] font-light">
+                  <span className="font-medium text-white">365</span> <span className="text-[#959595]">portali w</span> <span className="font-medium text-white">340</span> <span className="text-[#959595]">miejscach w Polsce</span>
+                </p>
               </div>
             </div>
             <div className="w-[280px] sm:w-[400px] md:w-auto relative map-container">
