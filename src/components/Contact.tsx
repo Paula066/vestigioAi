@@ -102,16 +102,37 @@ export default function Contact() {
           {/* Right Column - Contact Info */}
           <div className="flex-1">
             <div className="flex flex-col items-start">
-              <div className="flex items-center gap-6 mb-6">
+              <div className="flex gap-10 mb-1">
+                <div className="flex flex-col gap-3">
                 <div className="flex flex-col">
-                  <h3 className="text-white text-[24px] md:text-[32px] font-light">
+                  <h3 className="text-white text-[23.6px] font-normal leading-[29.53px] mb-2">
                     Sara Gamrot
                   </h3>
-                  <p className="text-[#72787E] text-[14px] md:text-[16px]">
+                  <p className="text-[#C2C2C2] text-[16px] font-extralight leading-[22px] mb-3">
                     Project Manager
                   </p>
                 </div>
-                <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden border-2 border-[#48DEEE]">
+                <div className="mb-[30px]">
+                <a
+                  href="mailto:s.gamrot@vestigio.ai"
+                  className="text-white text-[20px] font-extralight leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors"
+                >
+                  s.gamrot@vestigio.ai
+                </a>
+                <div className="text-white text-[20px] font-extralight leading-[28px] tracking-[0.4px]">
+                  514 019 528
+                </div>
+              </div>
+                </div>
+                <div 
+                  className="w-[140px] h-[140px] rounded-full overflow-hidden"
+                  style={{
+                    border: '2px solid transparent',
+                    backgroundImage: 'linear-gradient(#000, #000), linear-gradient(90deg, #EF7FA3, #F3B4A0, #48DEEE)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box'
+                  }}
+                >
                   <img
                     src="/pm.png"
                     alt="Sara Gamrot"
@@ -120,28 +141,18 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="space-y-2 mb-12">
-                <a
-                  href="mailto:s.gamrot@vestigio.ai"
-                  className="text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors"
-                >
-                  s.gamrot@vestigio.ai
-                </a>
-                <div className="text-white text-[16px] md:text-[18px]">
-                  514 019 528
-                </div>
-              </div>
+              
 
               <div className="mb-6">
-                <h4 className="text-white text-[24px] md:text-[32px] font-light mb-4">
+                <h4 className="text-white text-[23.6px] font-normal leading-[29.53px] mb-4">
                   Konsultacja
                 </h4>
-                <p className="text-[#C2C2C2] text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] mb-6">
+                <p className="text-white text-[15.8px] font-light leading-[22.69px] mb-6">
                   Możesz też od razu zarezerwować 15-minutową, bezpłatną konsultację. Konkretnie i bez zobowiązań.
                 </p>
                 <a
                   href="#konsultacja"
-                  className="text-white text-[16px] md:text-[18px] underline hover:text-[#48DEEE] transition-colors"
+                  className="relative text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
                 >
                   Umawiam się na konsultację
                 </a>
