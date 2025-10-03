@@ -9,6 +9,7 @@ import Process from './components/Process/Process';
 import Offer from './components/Offer/Offer';
 import Benefits from './components/Benefits';
 import Discount from './components/Discount';
+import Testimonials from './components/Testimonials';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
             <Offer />
             <Benefits />
             <Discount />
+            <Testimonials />
         </main>
       </div>
     </Router>

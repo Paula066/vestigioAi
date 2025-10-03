@@ -103,7 +103,7 @@ export default function Discount() {
 
       {/* Slider Section */}
       <div className="mt-[170px] flex items-center py-[41px] px-[48px] rounded-[24px] border border-[#72787E] bg-black">
-        <h3 className="text-white text-[44px] font-light leading-[57px] mr-[60px]">
+        <h3 className="text-white text-[36px] font-light leading-[40px] mr-[60px]">
           Sprawdź budżet <br /> i rabat
         </h3>
         
