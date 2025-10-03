@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg';
+import favicon from '../assets/favicon.svg';
 import { useState } from 'react';
 
 const scrollToSection = (sectionId: string) => {
@@ -25,7 +26,8 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <button onClick={() => handleNavClick('hero')} className="flex items-center cursor-pointer">
-              <img src={logo} alt="Vestigio" className="h-8" />
+              <img src={logo} alt="Vestigio" className="hidden md:block h-8" />
+              <img src={favicon} alt="Vestigio" className="block md:hidden h-8 w-8" />
             </button>
           </div>
           
@@ -85,7 +87,7 @@ export default function Header() {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="absolute top-20 left-0 right-0 bg-black/95 backdrop-blur-sm md:hidden">
-              <nav className="px-4 py-6">
+              <nav className="px-4 pb-3">
                 <ul className="flex flex-col space-y-4">
                   <li>
                     <button onClick={() => handleNavClick('about')} className="text-white/70 hover:text-white block w-full text-left cursor-pointer">
