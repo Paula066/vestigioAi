@@ -71,19 +71,25 @@ export default function Discount() {
       </div>
 
       {/* Slider Section */}
-      <div className="mt-[170px] flex">
+      <div className="mt-[170px] flex items-center">
         <h3 className="text-white text-[44px] font-normal leading-[57px] mb-8 mr-[60px]">
           Sprawdź budżet <br /> i rabat
         </h3>
         
           <div className="relative mb-12 flex-1">
-            <div className="absolute left-1/2 -top-16 transform -translate-x-1/2">
-              <div className="bg-[#212125] text-[#52DCEA] text-[31px] font-normal px-4 py-[6px] rounded-[44px] whitespace-nowrap">
-                {value.toLocaleString()} zł
-              </div>
-            </div>
-
             <div className="relative p-2 flex-1 bg-[#363645] rounded-[999px]">
+              <div 
+                className="absolute"
+                style={{ 
+                  left: `${((value - 1000) / (50000 - 1000)) * 100}%`,
+                  top: '-80px',
+                  transform: 'translateX(-50%)'
+                }}
+              >
+                <div className="bg-[#212125] text-[#52DCEA] text-[31px] font-normal px-4 py-[6px] rounded-[44px] whitespace-nowrap">
+                  {value.toLocaleString()} zł
+                </div>
+              </div>
               <style jsx>{`
                 input[type="range"] {
                   -webkit-appearance: none;
