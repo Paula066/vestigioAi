@@ -4,11 +4,11 @@ import senuto from '../assets/senuto.svg';
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden mt-[30px]">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-white">
+            <div className="text-center md:text-left mr-[100px]">
+              <h1 className="text-4xl md:text-5xl whitespace-nowrap lg:text-7xl font-light tracking-tight text-white">
                 Cała Polska
                 <br />
                 linkuje do Ciebie
@@ -30,7 +30,7 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-            <div className="w-[280px] sm:w-[400px] md:w-auto relative map-container">
+            <div className=" md:w-auto relative map-container">
               <img src={map} alt="Vestigio" className="w-full h-auto map-animate" />
             </div>
         </div>

@@ -52,8 +52,8 @@ export default function Contact() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  placeholder="Arkadiusz"
-                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-white focus:outline-none transition-all input-gradient-focus"
+                  placeholder="Imię"
+                  className="bg-transparent border border-[#333333] rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus"
                 />
                 <input
                   type="text"
