@@ -5,6 +5,7 @@ import publicationMap from '../../assets/publicationMap.svg';
 
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import check from '../../assets/checked.svg';
 
 interface GradientTextProps {
   children: React.ReactNode;
@@ -34,15 +35,17 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
             <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px]">Zobacz przykład</button>
           </div>
         </div>
-        <div className="rounded-[12px] bg-[rgba(255,255,255,0.08)] p-6 relative after:absolute after:inset-0 after:rounded-[12px] after:border-2 after:border-[rgba(155,127,239,1)] after:border-r-[rgba(72,222,238,1)] after:border-b-[rgba(72,222,238,1)]">
-          <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
-          <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
-          <div className="space-y-6">
-            <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
-            <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
-            <div className="text-[#C2C2C2]">Link w rankingu</div>
-            <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
-            <button className="text-[#ffffffcc] mt-[60px] sm:mt-[95px]">Zobacz przykład</button>
+        <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE]">
+          <div className="relative bg-black rounded-[10px] p-6">
+            <h4 className="text-white text-[20px] sm:text-[24px]">Premium</h4>
+            <div className="text-[28px] sm:text-[34px] font-light text-white mb-4 sm:mb-6 mt-2 sm:mt-3">600 zł <span className="text-[20px] sm:text-[24px] font-light">netto / rok</span></div>
+            <div className="space-y-6">
+              <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
+              <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
+              <div className="text-[#C2C2C2]">Link w rankingu</div>
+              <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
+              <button className="text-[#ffffffcc] mt-[60px] sm:mt-[46px]">Zobacz przykład</button>
+            </div>
           </div>
         </div>
       </div>
@@ -52,23 +55,25 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
   if (type === 'publication') {
     return (
       <div className="gap-6 sm:gap-8">
-        <div className="text-[#C2C2C2] text-[14px] sm:text-base mb-8 md:max-w-[870px]">Wypromuj swoje artykuły u nas. Wszystkie artykuły oznaczane są nakładką  graficzną Artykuł sponsorowany, zgodną z wymogami prawnymi. </div>
-        <div className="flex justify-between items-center">
-        <div className="flex-1 flex items-center">
-          <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
+        <div className="text-[#C2C2C2] text-[14px] sm:text-base mb-8 md:max-w-[870px]">
+          Wypromuj swoje artykuły u nas. Wszystkie artykuły oznaczane są nakładką  graficzną Artykuł sponsorowany, zgodną z wymogami prawnymi.
         </div>
-        <div className="flex-1">
-          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-            <h4 className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
-            <div className="font-inter text-[20px] font-medium leading-[28px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-4">120 - 179 zł</div>
-            <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
-              <div>Czas emisji artykułu: 12 miesięcy</div>
-              <div>Ilość linków w artykule: max 3</div>
-              <div>Linki dofollow mające wpływ na Twoje SEO: ✓</div>
-              <div>Promocja na stronie głównej przez 7 dni</div>
+        <div className="flex justify-between items-center">
+          <div className="flex-1 flex items-center">
+            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
+          </div>
+          <div className="flex-1">
+            <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
+              <h4 className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white mb-[20px]">Artykuł sponsorowany</h4>
+              <div className="font-inter text-[20px] font-medium leading-[28px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-4">120 - 179 zł</div>
+              <div className="space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
+                <div>Czas emisji artykułu: 12 miesięcy</div>
+                <div>Ilość linków w artykule: max 3</div>
+                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-4 h-4" /></div>
+                <div>Promocja na stronie głównej przez 7 dni</div>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     );
@@ -77,23 +82,23 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
     return (
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
         <div className="flex-1">
-          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-6">
-            <h4 className="text-[32px] font-normal text-white mb-4">Mam swój artykuł</h4>
-            <div className="text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px] mb-6">
+          <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] pt-[28px] px-[24px] pb-[40px] min-h-[230px]">
+            <h4 className="text-[24px] font-normal leading-[28px] tracking-[-1.2px] text-white mb-[12px]">Mam swój artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[15.8px] font-light leading-[22.69px] mb-6">
               Artykuł musi spełniać wymagania: min. 2500 zzs, zdjęcie główne + max 3 zdjęcia w treści, max 3 linki, tematyka zgodna z Polskim prawem
             </div>
-            <div className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white">0 zł</div>
+            <div className="font-inter text-[36px] font-medium leading-[28px] tracking-[-1.8px] text-white">0 zł</div>
           </div>
         </div>
         <div className="flex-1">
-          <div className="rounded-[24px] p-[2px] relative bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE]">
-            <div className="relative bg-black rounded-[22px] p-6">
-            <h4 className="text-[32px] font-normal text-white mb-4">Chcę zamówić artykuł</h4>
-            <div className="text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px] mb-6">
+          <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE]">
+            <div className="relative bg-black rounded-[10px] pt-[28px] px-[24px] pb-[40px] min-h-[230px]">
+            <h4 className="text-[24px] font-normal leading-[28px] tracking-[-1.2px] text-white mb-[12px]">Chcę zamówić artykuł</h4>
+            <div className="text-[#C2C2C2] font-inter text-[15.8px] font-light leading-[22.69px] mb-6">
               Tworzony w autorskim procesie z AI + słowa kluczowe Twojej branży. Gotowy do publikacji: pełna treść, miniaturka, zdjęcie.
             </div>
-            <div className="font-inter text-[44px] font-normal leading-[57px] tracking-[-1.76px] text-white">
-              60 <span className="text-[24px] font-normal">zł / artykuł</span>
+            <div className="font-inter text-[36px] mt-[37px] font-medium leading-[28px] tracking-[-1.8px] text-white">
+              60 <span className="text-[24px] font-medium leading-[28px] tracking-[-1.2px]">zł / artykuł</span>
             </div>
             </div>
           </div>
@@ -194,10 +199,10 @@ export default function Offer() {
       </div>
 
       <div className="mt-12 flex flex-col sm:flex-row items-center justify-between">
-        <p className="text-white text-[20px] font-light mb-4 sm:mb-0">
+        <p className="text-white text-[24px] font-light leading-[28px] tracking-[-1.2px] mb-4 sm:mb-0">
           Skontaktuj się po więcej konkretów. Bez zobowiązań.
         </p>
-        <button className="bg-[#7B61FF] hover:bg-[#6B51EF] transition-colors rounded-full py-4 px-8 text-white">
+        <button className="inline-block rounded-full px-[48px] py-3 text-base font-light text-black hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(90deg, #FFE4D6 0%, #D5BBF9 100%)' }}>
           Odbierz darmową ofertę
         </button>
       </div>

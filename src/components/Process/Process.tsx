@@ -14,7 +14,7 @@ export default function Process() {
             </div>
             <div>
               <h3 className="text-white text-[20px] leading-[24px] text-left font-medium mb-3">Wybierasz formę promocji</h3>
-              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base">Artykuł sponsorowany <br /> lub wizytówka firmy na wybranym portalu.</p>
+              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base max-w-[280px]">Artykuł sponsorowany <br /> lub wizytówka firmy na wybranym portalu.</p>
             </div>
           </div>
 
@@ -25,7 +25,7 @@ export default function Process() {
             </div>
             <div>
               <h3 className="text-white text-[20px] leading-[24px] text-left font-medium mb-3">Treść? Ty decydujesz</h3>
-              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base">Dostarczasz własny materiał lub zlecasz to nam – tworzymy treści w oparciu o AI i SEO.</p>
+              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base max-w-[280px]">Dostarczasz własny materiał lub zlecasz to nam – tworzymy treści w oparciu o AI i SEO.</p>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ export default function Process() {
             </div>
             <div>
               <h3 className="text-white text-[20px] leading-[24px] text-left font-medium mb-3">Weryfikacja i akceptacja</h3>
-              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base">Sprawdzamy zgodność z regulaminem i jakość. W przypadku tekstu od nas – akceptujesz przed publikacją.</p>
+              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base max-w-[280px]">Sprawdzamy zgodność z regulaminem i jakość. W przypadku tekstu od nas – akceptujesz przed publikacją.</p>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function Process() {
             </div>
             <div>
               <h3 className="text-white text-[20px] leading-[24px] text-left font-medium mb-3">Publikacja i wsparcie</h3>
-              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base">Artykuł trafia na portal, fanpage serwisu i stronę główną (min. 7 dni). Zawiera linki dofollow.</p>
+              <p className="text-[#C2C2C2] text-left leading-[22px] font-light text-base max-w-[280px]">Artykuł trafia na portal, fanpage serwisu i stronę główną (min. 7 dni). Zawiera linki dofollow.</p>
             </div>
           </div>
         </div>
