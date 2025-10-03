@@ -27,8 +27,8 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-            <div className="w-[280px] sm:w-[400px] md:w-auto">
-              <img src={map} alt="Vestigio" className="w-full h-auto" />
+            <div className="w-[280px] sm:w-[400px] md:w-auto relative map-container">
+              <img src={map} alt="Vestigio" className="w-full h-auto map-animate" />
             </div>
         </div>
         <div className="mt-[32px] md:mt-[43px] flex flex-col md:flex-row justify-between items-center md:items-end gap-6 md:gap-x-[120px] text-sm">
