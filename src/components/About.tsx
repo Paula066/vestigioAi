@@ -52,7 +52,7 @@ export default function About() {
           <div className='w-full md:flex-1 relative mb-8 md:mb-0'>
             <div className="relative z-10">
               <img 
-                src="/founders.png" 
+                src="/founders.jpg" 
                 alt="Founders of Vestigio Media" 
                 className="mx-auto max-w-full h-[285px] md:h-auto rounded-lg shadow-lg object-cover"
               />
