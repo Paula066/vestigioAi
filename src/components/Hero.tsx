@@ -41,11 +41,11 @@ export default function Hero() {
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-[48px] text-center md:text-left">
               <div>
                 <div className="text-[16px] md:text-[18px] leading-[24px] md:leading-[30px] font-light text-white">533 105</div>
-                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 max-w-[200px]">szacowany miesięczny ruch całej sieci</div>
+                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 md:max-w-[200px]">szacowany miesięczny ruch całej sieci</div>
               </div>
               <div>
                 <div className="text-[16px] md:text-[18px] leading-[24px] md:leading-[30px] font-light text-white">175+</div>
-                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 max-w-[200px]">portali z szacowanym miesięcznym ruchem 1000+ wejść / msc</div>
+                <div className="text-[12px] sm:text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] text-zinc-400 md:max-w-[200px]">portali z szacowanym miesięcznym ruchem 1000+ wejść / msc</div>
               </div>
             </div>
             <div className="text-[12px] sm:text-[14px] text-zinc-400 flex items-center whitespace-nowrap gap-x-1">

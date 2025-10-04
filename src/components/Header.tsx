@@ -26,8 +26,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <button onClick={() => handleNavClick('hero')} className="flex items-center cursor-pointer">
-              <img src={logo} alt="Vestigio" className="hidden md:block h-8" />
-              <img src={favicon} alt="Vestigio" className="block md:hidden h-8 w-8" />
+              <img src={logo} alt="Vestigio" className="h-8" />
             </button>
           </div>
           

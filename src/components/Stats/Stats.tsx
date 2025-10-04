@@ -12,7 +12,7 @@ export default function Stats() {
 
           }}>
             <div className='py-4 pl-2 md:pl-8 md:py-2 md:px-8 md:py-6'>
-              <div className="text-[18px] leading-[28px] md:text-[32px] md:text-[52px] font-medium md:leading-[32px] md:leading-[60px] font-light mb-2 md:mb-2 text-black">365</div>
+              <div className="text-[32px] leading-[28px] md:text-[32px] md:text-[52px] font-medium md:leading-[32px] md:leading-[60px] font-light mb-2 md:mb-2 text-black">365</div>
               <div className="text-[14px] leading-[18px] md:text-[16px] md:text-[18px] font-medium md:leading-[20px] mb-[12px] md:mb-[18px] text-black">lokalnych portali w całej Polsce, w których pojawi się Twoja firma.</div>
               <div className="text-[12px] leading-[16px] md:text-[14px] md:text-base font-light md:leading-[20px] text-black">Portale obejmują swoim zasięgiem <br /> aż 340 miejscowości.</div>
             </div>
@@ -26,8 +26,8 @@ export default function Stats() {
             backgroundPosition: 'center',
 
           }}>
-            <div className='pl-2 py-2 md:px-8 md:py-6'>
-              <div className="text-[18px] leading-[28px] md:text-[32px] md:text-[52px] font-medium md:leading-[32px] md:leading-[60px] font-light mb-2 md:mb-2 text-black">87 174</div>
+            <div className='py-4 pl-2 md:pl-8 md:py-2 md:px-8 md:py-6'>
+              <div className="text-[32px] leading-[28px] md:text-[32px] md:text-[52px] font-medium md:leading-[32px] md:leading-[60px] font-light mb-2 md:mb-2 text-black">87 174</div>
               <div className="text-[14px] leading-[18px] md:text-[16px] md:text-[18px] font-medium md:leading-[20px] mb-[12px] md:mb-[18px] text-black">lokalnych rankingów firm w całej Polsce, a Ty możesz być wśród nich.</div>
               <div className="text-[12px] leading-[16px] md:text-[14px] md:text-base font-light md:leading-[20px] text-black">Rankingi to doskonałe miejsce na zaprezentowanie swojej firmy.</div>
             </div>
