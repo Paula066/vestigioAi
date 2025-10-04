@@ -40,6 +40,7 @@
     "sharp": "^0.34.4",
     "svgo": "^4.0.0",
     "tailwindcss": "^4.1.12",
+    "terser": "^5.44.0",
     "typescript": "^5.9.2",
     "vite": "^7.1.3"
   }
