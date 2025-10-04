@@ -4,9 +4,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const formSchema = z.object({
-  firstName: z.string().min(2, 'Imię musi mieć co najmniej 2 znaki'),
-  lastName: z.string().min(2, 'Nazwisko musi mieć co najmniej 2 znaki'),
-  position: z.string().min(2, 'Stanowisko musi mieć co najmniej 2 znaki'),
+  firstName: z.string().min(1, 'Imię jest wymagane'),
+  lastName: z.string().min(1, 'Nazwisko jest wymagane'),
+  position: z.string().min(1, 'Stanowisko jest wymagane'),
   phone: z.string().optional(),
   email: z.string().email('Nieprawidłowy format adresu email')
 });
@@ -99,7 +99,7 @@ export default function Contact() {
               <div className="relative flex flex-col mb-8">
                 <input
                   type="email"
-                  placeholder="Mail"
+                  placeholder="Email"
                   {...register('email')}
                   className={`w-full bg-transparent border ${errors.email ? 'border-red-500' : 'border-[#333333]'} rounded-full px-6 h-[40px] text-[16px] text-white placeholder-[#72787E] focus:outline-none transition-all input-gradient-focus`}
                 />
