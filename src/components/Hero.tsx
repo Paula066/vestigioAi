@@ -14,7 +14,7 @@ export default function Hero() {
                 linkuje do Ciebie
               </h1>
               <div className="block md:hidden w-full max-w-[280px] mx-auto mt-6">
-                <img src={map} alt="Vestigio" loading="lazy" className="w-full h-auto map-animate" />
+                <img src={map} alt="Vestigio" fetchPriority="high" className="w-full h-auto map-animate" />
               </div>
               <p className="mt-4 md:mt-6 text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] font-normal text-[#959595] font-inter">
                 Pokaż się na niezależnych portalach informacyjnych
@@ -34,7 +34,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hidden md:block w-full sm:w-[80%] md:w-auto relative map-container">
-              <img src={map} alt="Vestigio" loading="lazy" className="w-full h-auto map-animate" />
+              <img src={map} alt="Vestigio" fetchPriority="high" className="w-full h-auto map-animate" />
             </div>
         </div>
         <div className="mt-[24px] md:mt-[32px] lg:mt-[43px] flex flex-col md:flex-row justify-between items-center md:items-end gap-4 md:gap-6 lg:gap-x-[120px] text-sm">
