@@ -47,12 +47,9 @@ export default function Contact() {
           {/* Left Column - Form */}
           <div className="flex-1 flex justify-center md:justify-start">
            
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 border border-white/[0.24] rounded-[24px] p-3 md:px-6 md:py-8 md:p-[48px] md:pt-[40px] w-full min-w-[655px]">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 border border-white/[0.24] rounded-[24px] p-3 md:px-6 md:py-8 md:p-[48px] md:pt-[40px] w-full md:min-w-[655px]">
               <div className="text-white text-[15px] sm:text-[16px] md:text-[18px] font-light mb-4 sm:mb-6">
                 Twoje dane
-              </div>
-              <div className="text-[#72787E] text-[12px] mb-4">
-                * Pola wymagane
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative flex flex-col">

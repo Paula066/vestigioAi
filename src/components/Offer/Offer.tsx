@@ -32,7 +32,13 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
             <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
             <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
             <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
-            <button className="text-[#ffffffcc] mt-[40px] sm:mt-[95px] cursor-pointer">Zobacz przykład</button>
+            <a 
+              href="https://otwartawarszawa.pl/wizytowki-firm/agencja-seo-vestigio"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="block text-[#ffffffcc] hover:text-white mt-[40px] sm:mt-[95px] cursor-pointer">
+              Zobacz przykład
+            </a>
           </div>
         </div>
         <div className="rounded-[12px] p-[2px] relative bg-gradient-to-r from-[#9B7FEF] to-[#48DEEE]">
@@ -44,7 +50,13 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
               <div className="text-[#C2C2C2]">Link w rankingu</div>
               <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
-              <button className="text-[#ffffffcc] mt-[40px] sm:mt-[46px] cursor-pointer">Zobacz przykład</button>
+              <a 
+                href="https://otwartawarszawa.pl/firmy"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="block text-[#ffffffcc] hover:text-white mt-[40px] sm:mt-[46px] cursor-pointer">
+                Zobacz przykład
+              </a>
             </div>
           </div>
         </div>
