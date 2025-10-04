@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import questionIcon from '../assets/question.svg';
 
 interface FAQItem {
