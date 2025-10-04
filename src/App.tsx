@@ -1,21 +1,17 @@
 
-import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Loading from './components/Loading';
-
-// Lazy load components
-const About = lazy(() => import('./components/About'));
-const Stats = lazy(() => import('./components/Stats/Stats'));
-const Process = lazy(() => import('./components/Process/Process'));
-const Offer = lazy(() => import('./components/Offer/Offer'));
-const Benefits = lazy(() => import('./components/Benefits'));
-const Discount = lazy(() => import('./components/Discount'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const Contact = lazy(() => import('./components/Contact'));
-const FAQ = lazy(() => import('./components/FAQ'));
-const Footer = lazy(() => import('./components/Footer'));
+import About from './components/About';
+import Stats from './components/Stats/Stats';
+import Process from './components/Process/Process';
+import Offer from './components/Offer/Offer';
+import Benefits from './components/Benefits';
+import Discount from './components/Discount';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -25,25 +21,21 @@ export default function App() {
         <Header />
         <main>
           <Hero />
-          <Suspense fallback={<Loading />}>
-            <div className='pt-[30px] md:pt-[120px]'>
-              <About />
-            </div>
-            <div className='mb-[60px] md:mb-[158px]'>
-              <Stats />
-            </div>
-            <Process />
-            <Offer />
-            <Benefits />
-            <Discount />
-            <Testimonials />
-            <Contact />
-            <FAQ />
-          </Suspense>
+          <div className='pt-[30px] md:pt-[120px]'>
+            <About />
+          </div>
+          <div className='mb-[60px] md:mb-[158px]'>
+            <Stats />
+          </div>
+          <Process />
+          <Offer />
+          <Benefits />
+          <Discount />
+          <Testimonials />
+          <Contact />
+          <FAQ />
         </main>
-        <Suspense fallback={<Loading />}>
-          <Footer />
-        </Suspense>
+        <Footer />
       </div>
     </Router>
   );
