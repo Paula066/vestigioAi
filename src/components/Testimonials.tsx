@@ -10,13 +10,13 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({ text, author, position, img }) => (
   <div className="flex flex-col bg-black/30 rounded-2xl backdrop-blur-sm">
-    <img src={quotesIcon} alt="quote" className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4" />
+    <img src={quotesIcon} alt="quote" loading="lazy" className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4" />
     <p className="text-white text-[14px] sm:text-[15px] md:text-[18px] font-light leading-[20px] sm:leading-[22px] md:leading-[26px] mb-4 sm:mb-6 md:mb-8">{text}</p>
     <div className="flex items-center gap-3 md:gap-4">
       <div className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[47px] md:h-[47px] rounded-full relative">
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EF7FA3] via-[#F3B4A0] to-[#48DEEE] p-[2px]">
           <div className="w-full h-full rounded-full !bg-black">
-            <img src={`/${img === 'people1.svg' ? 'p1' : img === 'people2.svg' ? 'p2' : 'p3'}.png`} alt={author} className="w-full h-full rounded-full object-cover" />
+            <img src={`/${img === 'people1.svg' ? 'p1' : img === 'people2.svg' ? 'p2' : 'p3'}.png`} alt={author} loading="lazy" className="w-full h-full rounded-full object-cover" />
           </div>
         </div>
       </div>

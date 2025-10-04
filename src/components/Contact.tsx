@@ -137,6 +137,7 @@ export default function Contact() {
                     src="/pm.png"
                     alt="Sara Gamrot"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>

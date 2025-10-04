@@ -60,7 +60,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
         </div>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-0">
           <div className="hidden sm:flex w-full sm:flex-1 items-center justify-center">
-            <img src={publicationMap} alt="Publication Map" className="w-full max-w-[400px]" />
+            <img src={publicationMap} alt="Publication Map" loading="lazy" className="w-full max-w-[400px]" />
           </div>
           <div className="w-full sm:w-1/2">
             <div className="rounded-[12px] border border-[rgba(217,217,217,0.24)] bg-[rgba(255,255,255,0.08)] p-4 sm:p-6">
@@ -69,7 +69,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <div className="space-y-3 sm:space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
                 <div>Czas emisji artykułu: 12 miesięcy</div>
                 <div>Ilość linków w artykule: max 3</div>
-                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4" /></div>
+                <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" loading="lazy" className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4" /></div>
                 <div>Promocja na stronie głównej przez 7 dni</div>
               </div>
             </div>
@@ -145,7 +145,7 @@ function PricingBox({ isExpanded, onToggle, title, price, arrowIcon, gradientTyp
           <button 
             className={`hidden sm:block cursor-pointer transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`}
           >
-            <img src={arrowIcon} alt="Expand" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            <img src={arrowIcon} alt="Expand" loading="lazy" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
           <h3 className={twMerge(titleClasses)}>{title}</h3>
         </div>
