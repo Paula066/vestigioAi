@@ -132,7 +132,7 @@ export default function Contact() {
                 <div className="mb-[30px]">
                 <a
                   href="mailto:s.gamrot@vestigio.ai"
-                  className="text-white text-[18px] md:text-[20px] font-extralight leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors block"
+                  className="text-white text-[18px] md:text-[20px] font-extralight leading-[28px] tracking-[0.4px] hover:text-white transition-colors block"
                 >
                   s.gamrot@vestigio.ai
                 </a>
@@ -170,7 +170,7 @@ export default function Contact() {
                 </p>
                 <a
                   href="#konsultacja"
-                  className="relative inline-block text-white text-[16px] md:text-[18px] hover:text-[#48DEEE] transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
+                  className="relative inline-block text-white text-[16px] md:text-[18px] hover:text-white transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
                 >
                   Umawiam się na konsultację
                 </a>

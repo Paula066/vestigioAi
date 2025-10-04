@@ -25,13 +25,13 @@ export default function Footer() {
               href="https://www.vestigio.media" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors"
+              className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-white transition-colors"
             >
               www.vestigio.media
             </a>
             <a 
               href="tel:503678757"
-              className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors"
+              className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-white transition-colors"
             >
               503 678 757
             </a>
@@ -41,7 +41,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/vestigio-media" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="relative text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-[#48DEEE] transition-colors before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] before:bg-white w-fit"
+              className="relative text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-white transition-colors before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-full before:h-[2px] before:bg-white w-fit"
             >
               Linkedin
             </a>
