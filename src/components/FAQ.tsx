@@ -27,10 +27,7 @@ const faqData: FAQItem[] = [
     question: "Na jakich warunkach działa współpraca?",
     answer: "Współpraca odbywa się w klasycznym modelu składania zamówienia lub modelu prepaid – budżet opłacany z góry. Dzięki temu otrzymujesz gwarancję stałej zniżki na wszystkie działania, zgodnie z aktualnym cennikiem rynkowym. Brak ukrytych kosztów, pełna przejrzystość."
   },
-  {
-    question: "Jakie rabaty oferujecie w pakietach prepaid?",
-    answer: "Im większy pakiet, tym większa oszczędność:\n\n• 5000 - 10%\n• 10000 - 15%\n• 20000 - 25%\n• 30000 - 30%\n• 50000 - 40%\n\nZniżki obowiązują na: artykuły sponsorowane, wizytówki i artykuły. Zgodnie z aktualnymi stawkami w momencie realizacji."
-  }
+
 ];
 
 export default function FAQ() {

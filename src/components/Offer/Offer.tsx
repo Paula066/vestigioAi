@@ -31,7 +31,7 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
           <div className="space-y-4 sm:space-y-6">
             <div className="text-[#C2C2C2]">Obecność w sekcji: <GradientText>Więcej firm z kategorii</GradientText></div>
             <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
-            <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">192 zł</span></div>
+            <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">200 zł</span></div>
             <a 
               href="https://otwartawarszawa.pl/wizytowki-firm/agencja-seo-vestigio"
               target="_blank"
@@ -49,9 +49,9 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <div className="text-[#C2C2C2]">Wyższa pozycja: <GradientText>Promowane firmy z kategorii</GradientText></div>
               <div className="text-[#C2C2C2]">Link na stronie wizytówki</div>
               <div className="text-[#C2C2C2]">Link w rankingu</div>
-              <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">420 zł</span></div>
+              <div className="text-[#C2C2C2]">Przedłużenie wizytówki<br/>na następny rok: <span className="text-white">450 zł</span></div>
               <a 
-                href="https://otwartawarszawa.pl/firmy"
+                href="https://otwartawarszawa.pl/firmy/pozycjonowanie-stron-warszawa"
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="block text-[#ffffffcc] hover:text-white mt-[40px] sm:mt-[46px] cursor-pointer">
@@ -79,10 +79,11 @@ const ExpandedContent = ({ type }: ExpandedContentProps) => {
               <h4 className="font-inter text-[24px] sm:text-[32px] font-normal leading-[32px] sm:leading-[42px] tracking-[-1px] sm:tracking-[-1.28px] text-white mb-[12px] sm:mb-[16px]">Artykuł sponsorowany</h4>
               <div className="font-inter text-[16px] sm:text-[18px] font-medium leading-[24px] bg-gradient-to-r from-[#9FCBA2] via-[#FAFADB] to-[#FAFADB] bg-clip-text text-transparent mb-3 sm:mb-4">120 - 179 zł</div>
               <div className="space-y-3 sm:space-y-4 text-[#C2C2C2] font-inter text-[16px] font-normal leading-[22px]">
-                <div>Czas emisji artykułu: 12 miesięcy</div>
-                <div>Ilość linków w artykule: max 3</div>
+                <div>Czas emisji artykułu: bezterminowo</div>
+                <div>Ilość linków w artykule: maksymalnie 3</div>
                 <div className="flex items-center gap-2">Linki dofollow mające wpływ na Twoje SEO: <img src={check} alt="Check" loading="lazy" className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4" /></div>
                 <div>Promocja na stronie głównej przez 7 dni</div>
+                <div>Linkowanie wewnętrzne z minimum <span className='font-bold text-white'>8 artykułów </span> tematycznych  i 1 strony kategorii.</div>
               </div>
             </div>
           </div>

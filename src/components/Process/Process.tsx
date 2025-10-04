@@ -25,7 +25,7 @@ export default function Process() {
             </div>
             <div>
               <h3 className="text-white text-[16px] sm:text-[18px] md:text-[20px] leading-[20px] sm:leading-[22px] md:leading-[24px] text-left font-medium mb-2 sm:mb-3">Treść? Ty decydujesz</h3>
-              <p className="text-[#C2C2C2] text-left leading-[20px] sm:leading-[22px] font-light text-[14px] sm:text-[15px] md:text-base max-w-[280px]">Dostarczasz własny materiał lub zlecasz to nam – tworzymy treści w oparciu o AI i SEO.</p>
+              <p className="text-[#C2C2C2] text-left leading-[20px] sm:leading-[22px] font-light text-[14px] sm:text-[15px] md:text-base max-w-[280px]">Dostarczasz własny materiał lub zlecasz to nam – tworzymy treści w oparciu o autorski proces z wykorzystaniem AI.</p>
             </div>
           </div>
 

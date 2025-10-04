@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Left Column - Company Info */}
           <div className="flex flex-col">
             <p className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px]">
-              Vestigio AI Sp. z o.o.
+              Vestigio Media Sp. z o.o.
             </p>
             <p className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px]">
               ul. Warszawska 40/2A
@@ -30,10 +30,10 @@ export default function Footer() {
               www.vestigio.media
             </a>
             <a 
-              href="tel:503678757"
+              href="tel:514019528"
               className="text-white text-[15px] sm:text-[16px] md:text-[20px] font-extralight leading-[22px] sm:leading-[24px] md:leading-[28px] tracking-[0.4px] hover:text-white transition-colors"
             >
-              503 678 757
+              514 019 528
             </a>
             </div>
            

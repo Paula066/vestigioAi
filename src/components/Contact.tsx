@@ -172,7 +172,7 @@ export default function Contact() {
                   href="#konsultacja"
                   className="relative inline-block text-white text-[16px] md:text-[18px] hover:text-white transition-colors before:content-[''] before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[2px] before:bg-white"
                 >
-                  Umawiam się na konsultację
+                  Umawiam się na konsultację w Calendly
                 </a>
               </div>
             </div>

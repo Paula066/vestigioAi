@@ -48,7 +48,7 @@ export default function Discount() {
   const benefits = [
     'Start od 5 000 zł netto',
     'Zero presji – publikujesz, kiedy chcesz',
-    'Rabaty nawet do 35%',
+    'Rabaty nawet do 40%',
     'Pełna obsługa i wsparcie'
   ];
 

@@ -28,21 +28,20 @@ export default function About() {
         <div className="">
           <h1 className="font-['Inter'] text-[24px] sm:text-[28px] md:text-[44px] leading-[32px] sm:leading-[36px] md:leading-[57px] font-normal tracking-[-0.96px] sm:tracking-[-1.12px] md:tracking-[-1.76px]">
             <span style={gradientStyle}>
-              Vestigio Media to
+              Vestigio Media 
             </span>
             {' '}
-            sieć lokalnych portali i rankingów firm,
+            to sieć lokalnych portali informacyjnych, która
             {' '}
             <span style={gradientStyle}>
-              która łączy Twoją markę z realnymi odbiorcami i daje 
+             wspiera Twoją widoczność 
+            
             </span>
             <span className="text-white pl-3">
-              maksymalną widoczność w
+            w Google i AI.
             </span>
             {' '}
-            <span style={gradientStyle}>
-              Google, social mediach i AI.
-            </span>
+         
           </h1>
         </div>
 
@@ -74,7 +73,7 @@ export default function About() {
                 <div className="h-fit flex-1 flex-col">
                 <img src={grow} alt="Wzrost w Google" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 mb-3 sm:mb-4 md:mb-[15px]" />
                 <h3 className="text-white text-lg sm:text-xl font-medium mb-3 sm:mb-4">Wzrost w Google i LLM</h3>
-                <p className="text-gray-400 text-sm sm:text-base">mocne linki dofollow, trwałe publikacje i widoczność w rankingach, co wpływa na częstsze cytowania Twojego biznesu w ChatGPT, Claude, Google.</p>
+                <p className="text-gray-400 text-sm sm:text-base">mocne linki dofollow, trwałe publikacje i widoczność w rankingach, co wpływa na częstsze cytowania Twojego biznesu w AI i widoczność w Google.</p>
                 </div>
             
                 <div className="h-fit flex-1 flex-col">
