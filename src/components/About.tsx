@@ -1,6 +1,4 @@
 
-import foundersBg from '../assets/foundersBg.svg';
-import gradient from '../assets/gradient.svg';
 import effect from '../assets/effect.svg';
 import visibility from '../assets/visibility.svg';
 import grow from '../assets/grow.svg';
