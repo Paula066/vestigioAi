@@ -23,7 +23,7 @@ const DISCOUNT_TIERS = [
   { value: 17500, discount: 22 },
   { value: 18750, discount: 23 },
   { value: 20000, discount: 24 },
-  { value: 20000, discount: 25 },
+  { value: 21000, discount: 25 },
   { value: 22000, discount: 26 },
   { value: 24000, discount: 27 },
   { value: 26000, discount: 28 },
